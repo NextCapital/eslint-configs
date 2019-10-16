@@ -1,0 +1,20 @@
+{
+  "name": "@nextcapital/eslint-config-react-linter",
+  "version": "1.0.2",
+  "description": "Nextcapital React and JSX code conventions",
+  "author": "kreiserm@nextcapital.com",
+  "main": "index.js",
+  "peerDependencies": {
+    "eslint": ">= 5",
+    "eslint-config-airbnb": ">= 17",
+    "eslint-plugin-import": ">= 2",
+    "eslint-plugin-jsx-a11y": ">= 6",
+    "eslint-plugin-react": ">= 7"
+  },
+  "devDependencies": {
+    "autopublish": "0.0.8"
+  },
+  "scripts": {
+    "autopublish": "autopublish"
+  }
+}

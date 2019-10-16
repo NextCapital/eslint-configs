@@ -1,0 +1,18 @@
+{
+  "name": "@nextcapital/eslint-config-js-linter",
+  "version": "1.2.0",
+  "description": "Nextcapital JS code conventions",
+  "author": "kreiserm@nextcapital.com",
+  "main": "index.js",
+  "peerDependencies": {
+    "eslint": ">= 5",
+    "eslint-config-airbnb-base": ">= 13",
+    "eslint-plugin-import": ">= 2"
+  },
+  "devDependencies": {
+    "autopublish": "0.0.8"
+  },
+  "scripts": {
+    "autopublish": "autopublish"
+  }
+}

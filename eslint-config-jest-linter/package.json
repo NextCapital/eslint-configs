@@ -1,0 +1,17 @@
+{
+  "name": "@nextcapital/eslint-config-jest-linter",
+  "version": "1.0.0",
+  "description": "ESLint config for jest standards",
+  "author": "kreiserm@nextcapital.com",
+  "main": "index.js",
+  "peerDependencies": {
+    "eslint": ">= 5",
+    "eslint-plugin-jest": ">= 22"
+  },
+  "devDependencies": {
+    "autopublish": "0.0.8"
+  },
+  "scripts": {
+    "autopublish": "autopublish"
+  }
+}

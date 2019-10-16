@@ -1,0 +1,17 @@
+{
+  "name": "@nextcapital/eslint-config-jsdoc-linter",
+  "version": "1.0.0",
+  "description": "ESLint config for JSDoc standards",
+  "author": "kreiserm@nextcapital.com",
+  "main": "index.js",
+  "peerDependencies": {
+    "eslint": ">= 5",
+    "eslint-plugin-jsdoc": ">= 15"
+  },
+  "devDependencies": {
+    "autopublish": "0.0.8"
+  },
+  "scripts": {
+    "autopublish": "autopublish"
+  }
+}
