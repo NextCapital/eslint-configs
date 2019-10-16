@@ -1,6 +1,6 @@
 {
   "name": "@nextcapital/eslint-config-react-linter",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Nextcapital React and JSX code conventions",
   "author": "kreiserm@nextcapital.com",
   "main": "index.js",

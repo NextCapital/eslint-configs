@@ -4,18 +4,16 @@ An eslint config to enforce Nextcapital's React and JSX conventions. Uses `airbn
 
 ## Installation
 
-Note: Requires npm 5+.
-
-```
-npx install-peerdeps --dev @nextcapital/eslint-config-react-linter
+```bash
+npm install --save-dev @nextcapital/eslint-config-react-linter
 ```
 
 ## Usage
 
-Add `eslint-config-react-linter` to the extends section of your `.eslintrc` configuration file.
+Add `eslint-config-react-linter` to the extends section of your eslint configuration file.
 
 ```json
 {
-    "extends": "@nextcapital/eslint-config-react-linter"
+    "extends": ["@nextcapital/eslint-config-react-linter"]
 }
 ```
