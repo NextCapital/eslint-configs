@@ -11,6 +11,8 @@ module.exports = {
     sourceType: 'module'
   },
 
+  plugins: ['babel'],
+
   rules: {
     'arrow-parens': ['error', 'always'],
     'class-methods-use-this': 'off',
@@ -35,6 +37,8 @@ module.exports = {
     'space-before-function-paren': [
       'error', {'anonymous': 'never', 'named': 'never', 'asyncArrow': 'always'}
     ],
+
+    'babel/semi': 2,
 
     'import/extensions': ['error', 'ignorePackages'],
     'import/no-extraneous-dependencies': 1,

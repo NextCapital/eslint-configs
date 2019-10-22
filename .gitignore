@@ -1,0 +1,6 @@
+# dependencies
+node_modules
+npm-debug.log
+
+# artifacts
+.DS_Store

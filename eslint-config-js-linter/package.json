@@ -4,10 +4,11 @@
   "description": "Nextcapital JS code conventions",
   "author": "kreiserm@nextcapital.com",
   "main": "index.js",
-  "peerDependencies": {
-    "eslint": ">= 5",
-    "eslint-config-airbnb-base": ">= 13",
-    "eslint-plugin-import": ">= 2"
+  "dependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "^2.18.2"
   },
   "devDependencies": {
     "autopublish": "0.0.8"
