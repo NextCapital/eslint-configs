@@ -5,7 +5,7 @@ module.exports = {
 
   env: {
     es6: true,
-    'jest': true
+    jest: true
   },
   parserOptions: {
     ecmaVersion: 6,
