@@ -1,6 +1,6 @@
 {
   "name": "@nextcapital/eslint-config-jsdoc-linter",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "ESLint config for JSDoc standards",
   "author": "kreiserm@nextcapital.com",
   "main": "index.js",
