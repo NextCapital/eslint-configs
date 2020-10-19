@@ -11,9 +11,9 @@
     "eslint-plugin-import": "^2.18.2"
   },
   "devDependencies": {
-    "autopublish": "0.0.8"
+    "auto-publish-package": "^0.1.0"
   },
   "scripts": {
-    "autopublish": "autopublish"
+    "autopublish": "auto-publish-package"
   }
 }

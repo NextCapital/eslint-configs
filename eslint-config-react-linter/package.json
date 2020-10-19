@@ -12,9 +12,9 @@
     "eslint-plugin-react": ">= 7"
   },
   "devDependencies": {
-    "autopublish": "0.0.8"
+    "auto-publish-package": "^0.1.0"
   },
   "scripts": {
-    "autopublish": "autopublish"
+    "autopublish": "auto-publish-package"
   }
 }
