@@ -1,6 +1,6 @@
 {
   "name": "@nextcapital/eslint-config-js-linter",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "main": "index.js",
   "description": "Nextcapital JS code conventions",
   "license": "UNLICENSED",

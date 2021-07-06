@@ -42,7 +42,7 @@ module.exports = {
 
     'import/extensions': ['error', 'ignorePackages'],
     'import/no-extraneous-dependencies': 1,
-    'import/no-unresolved': 'off',
+    'import/no-unresolved': 'off'
   },
 
   overrides: [{
