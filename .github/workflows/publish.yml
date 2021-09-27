@@ -1,0 +1,91 @@
+name: 'Publish NPM packages'
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  jest:
+    name: Publish eslint-config-jest-linter npm package
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./eslint-config-jest-linter
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '12.x'
+      - name: Install Dependencies
+        run: npm ci
+      - name: Publish
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          access: public
+          check-version: true
+  js:
+    name: Publish eslint-config-js-linter npm package
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./eslint-config-js-linter
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '12.x'
+      - name: Install Dependencies
+        run: npm ci
+      - name: Publish
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          access: public
+          check-version: true
+  jsdoc:
+    name: Publish eslint-config-jsdoc-linter npm package
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./eslint-config-jsdoc-linter
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '12.x'
+      - name: Install Dependencies
+        run: npm ci
+      - name: Publish
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          access: public
+          check-version: true
+  react:
+    name: Publish eslint-config-react-linter npm package
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./eslint-config-react-linter
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '12.x'
+      - name: Install Dependencies
+        run: npm ci
+      - name: Publish
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          access: public
+          check-version: true
