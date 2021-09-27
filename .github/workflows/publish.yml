@@ -26,6 +26,7 @@ jobs:
           token: ${{ secrets.NPM_TOKEN }}
           access: public
           check-version: true
+          package: ./eslint-config-jest-linter/package.json
   js:
     name: Publish eslint-config-js-linter npm package
     runs-on: ubuntu-latest
@@ -47,6 +48,7 @@ jobs:
           token: ${{ secrets.NPM_TOKEN }}
           access: public
           check-version: true
+          package: ./eslint-config-js-linter/package.json
   jsdoc:
     name: Publish eslint-config-jsdoc-linter npm package
     runs-on: ubuntu-latest
@@ -68,6 +70,7 @@ jobs:
           token: ${{ secrets.NPM_TOKEN }}
           access: public
           check-version: true
+          package: ./eslint-config-jsdoc-linter/package.json
   react:
     name: Publish eslint-config-react-linter npm package
     runs-on: ubuntu-latest
@@ -89,3 +92,4 @@ jobs:
           token: ${{ secrets.NPM_TOKEN }}
           access: public
           check-version: true
+          package: ./eslint-config-react-linter/package.json
