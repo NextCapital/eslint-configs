@@ -1,1 +1,0 @@
-# eslint-configs-2
