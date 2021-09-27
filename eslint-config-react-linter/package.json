@@ -23,6 +23,7 @@
   },
   "scripts": {
     "autopublish": "auto-publish-package",
+    "ci": "npm run license",
     "license": "npm run license:production && npm run license:development",
     "license:development": "license-checker-rseidelsohn --summary --development --failOn='AGPL;CAL;CC BY-NC;CC BY-SA;CC BY-NC-SA;CC BY-NC-ND;CPAL;CPOL;EUPL;GPL;LGPL;NGPL;OSL;QPL;SISSL;Sleepycat;SSPL'",
     "license:production": "license-checker-rseidelsohn --summary --production --failOn='AGPL;CAL;CC BY-NC;CC BY-SA;CC BY-NC-SA;CC BY-NC-ND;CPAL;CPOL;EUPL;GPL;LGPL;NGPL;OSL;QPL;SISSL;Sleepycat;SSPL'"
