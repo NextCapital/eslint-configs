@@ -41,7 +41,7 @@ module.exports = {
 
     'babel/semi': 2,
 
-    'import/extensions': ['error', 'ignorePackages'],
+    'import/extensions': ['error', 'never'],
     'import/no-extraneous-dependencies': 1,
     'import/no-unresolved': 'off'
   },
