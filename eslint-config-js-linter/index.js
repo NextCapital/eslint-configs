@@ -22,6 +22,7 @@ module.exports = {
     'no-console': ['error'],
     'no-continue': 'off',
     'no-else-return': ['error', { allowElseIf: true }],
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxBOF": 0, "maxEOF": 0 }],
     'no-loop-func': 'off',
     'no-template-curly-in-string': 'off',
     'no-underscore-dangle': 'off',
