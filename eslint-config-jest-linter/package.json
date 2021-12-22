@@ -5,18 +5,8 @@
   "main": "index.js",
   "license": "UNLICENSED",
   "engines": {
-    "node": ">=12.13.1",
-    "npm": ">=6.14.11"
-  },
-  "dependencies": {
-    "eslint-plugin-jest": "^24.3.6"
-  },
-  "devDependencies": {
-    "auto-publish-package": "^0.1.0",
-    "license-checker-rseidelsohn": "^1.2.2"
-  },
-  "peerDependencies": {
-    "eslint": ">= 7"
+    "node": ">=16.13.0",
+    "npm": ">=8.1.0"
   },
   "scripts": {
     "autopublish": "auto-publish-package",
@@ -24,5 +14,15 @@
     "license": "npm run license:production && npm run license:development",
     "license:development": "license-checker-rseidelsohn --summary --development --failOn='AGPL;CAL;CC BY-NC;CC BY-SA;CC BY-NC-SA;CC BY-NC-ND;CPAL;CPOL;EUPL;GPL;LGPL;NGPL;OSL;QPL;SISSL;Sleepycat;SSPL'",
     "license:production": "license-checker-rseidelsohn --summary --production --failOn='AGPL;CAL;CC BY-NC;CC BY-SA;CC BY-NC-SA;CC BY-NC-ND;CPAL;CPOL;EUPL;GPL;LGPL;NGPL;OSL;QPL;SISSL;Sleepycat;SSPL'"
+  },
+  "dependencies": {
+    "eslint-plugin-jest": "^24.3.6"
+  },
+  "peerDependencies": {
+    "eslint": ">= 7"
+  },
+  "devDependencies": {
+    "auto-publish-package": "^0.1.0",
+    "license-checker-rseidelsohn": "^1.2.2"
   }
 }
