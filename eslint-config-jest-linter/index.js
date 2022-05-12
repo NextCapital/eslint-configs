@@ -23,6 +23,7 @@ module.exports = {
     'jest/prefer-called-with': 'off',
     'jest/prefer-expect-assertions': 'off',
     'jest/prefer-inline-snapshots': 'off',
+    'jest/prefer-lowercase-title': ['error', { ignoreTopLevelDescribe: true }],
     'jest/prefer-strict-equal': 'off',
     'jest/prefer-to-have-length': 'warn',
     'jest/require-tothrow-message': 'off',
