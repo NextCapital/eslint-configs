@@ -14,6 +14,10 @@ module.exports = {
 
   rules: {
     'react/destructuring-assignment': 'off',
+    'react/function-component-definition': ['error', {
+      'namedComponents': 'arrow-function',
+      'unnamedComponents': 'arrow-function'
+    }],
     'react/jsx-curly-spacing': [2, { 'when': 'always' }],
     'react/require-default-props': 'off',
 
