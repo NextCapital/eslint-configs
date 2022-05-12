@@ -1,9 +1,7 @@
-name: 'Pull Request CI'
+name: CI
 on:
-  push:
-    branches: [ $default-branch ]
   pull_request:
-
+    types: [opened, synchronize, reopened]
 jobs:
   jest:
     name: eslint-config-jest-config
@@ -17,7 +15,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '12.x'
+          node-version: '16.x'
       - name: Install Dependencies
         run: npm ci
       - name: CI Tasks
@@ -34,7 +32,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '12.x'
+          node-version: '16.x'
       - name: Install Dependencies
         run: npm ci
       - name: CI Tasks
@@ -51,7 +49,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '12.x'
+          node-version: '16.x'
       - name: Install Dependencies
         run: npm ci
       - name: CI Tasks
@@ -68,7 +66,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '12.x'
+          node-version: '16.x'
       - name: Install Dependencies
         run: npm ci
       - name: CI Tasks
