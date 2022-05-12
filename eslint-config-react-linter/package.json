@@ -3,7 +3,7 @@
   "version": "3.0.0",
   "description": "Nextcapital React and JSX code conventions",
   "main": "index.js",
-  "license": "UNLICENSED",
+  "license": "Apache-2.0",
   "engines": {
     "node": ">=16.13.0",
     "npm": ">=8.1.0"
