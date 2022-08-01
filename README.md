@@ -23,6 +23,32 @@ Configs can be stacked on top of each other:
 * `eslint-config-jest-linter` - Enforces jest testing library standards.
 * `eslint-config-jsdoc-linter` - Enforces JSDoc documentation standards.
 
+## Working with Lerna
+
+This repository uses [lerna](https://lerna.js.org/docs/introduction) to manage multiple packages from the project root.
+
+### Installing
+
+`npx lerna bootstrap`
+
+If you have not installed Lerna at the project root, you may need to run `npm install`. 
+
+### Versioning
+
+`npx lerna version <major|minor|patch>`
+
+Omit the semver bump to version each package one by one through a series of prompts - useful when packages need different version bumps.
+
+**NOTE:** This will version ALL packages in one go.
+
+### Publishing
+
+**IMPORTANT:** Versioning is handled by GitHub Actions through the `publish.yml` workflow configuration. DO NOT ATTEMPT TO PUBLISH PACKAGES YOURSELF. Publishing yourself should fail anyways because you need the auth token for an npm user in the `@nextcapital` organization on npm. This section simply documents how the CI workflow works.
+
+`npx lerna publish from-package`
+
+Lerna will detect any new version bumps in the configured packages and publish those. If there are no packages to publish, lerna simply terminates.
+
 ## Contributing
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md)
