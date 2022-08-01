@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/lerna/schemas/lerna-schema.json",
+  "useNx": true,
+  "useWorkspaces": false,
+  "packages": [
+    "eslint-config-jest-linter",
+    "eslint-config-js-linter",
+    "eslint-config-jsdoc-linter",
+    "eslint-config-react-linter"
+  ],
+  "version": "independent"
+}
