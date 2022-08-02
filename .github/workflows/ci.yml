@@ -3,12 +3,9 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
-  jest:
-    name: eslint-config-jest-config
+  ci:
+    name: CI Script with Lerna
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./eslint-config-jest-linter
     steps:
       - name: Check out code
         uses: actions/checkout@v2
@@ -17,57 +14,6 @@ jobs:
         with:
           node-version: '16.x'
       - name: Install Dependencies
-        run: npm ci
+        run: npx lerna bootstrap
       - name: CI Tasks
-        run: npm run ci
-  js:
-    name: eslint-config-js-config
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./eslint-config-js-linter
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v2
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16.x'
-      - name: Install Dependencies
-        run: npm ci
-      - name: CI Tasks
-        run: npm run ci
-  jsdoc:
-    name: eslint-config-jsdoc-config
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./eslint-config-jsdoc-linter
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v2
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16.x'
-      - name: Install Dependencies
-        run: npm ci
-      - name: CI Tasks
-        run: npm run ci
-  react:
-    name: eslint-config-react-config
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./eslint-config-react-linter
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v2
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16.x'
-      - name: Install Dependencies
-        run: npm ci
-      - name: CI Tasks
-        run: npm run ci
+        run: npx lerna run ci
