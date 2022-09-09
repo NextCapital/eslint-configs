@@ -11,7 +11,7 @@ Configs can be stacked on top of each other:
 {
   "extends": [
     "@nextcapital/eslint-config-js-linter",
-    "@nextcapital/eslint-config-jest-linter"
+    "@nextcapital/eslint-config-jest-linter",
     "@nextcapital/eslint-config-jsdoc-linter"
   ]
 }
