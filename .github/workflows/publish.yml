@@ -17,6 +17,13 @@ jobs:
           node-version: '16.x'
       - name: Prepare npm auth
         run: echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > ./.npmrc
+      - name: Update index
+        run: |
+          git update-index --assume-unchanged .npmrc
+          git update-index --assume-unchanged ./eslint-config-jest-linter/.npmrc
+          git update-index --assume-unchanged ./eslint-config-js-linter/.npmrc
+          git update-index --assume-unchanged ./eslint-config-jsdoc-linter/.npmrc
+          git update-index --assume-unchanged ./eslint-config-react-linter/.npmrc
       - name: Install Dependencies
         run: npx lerna bootstrap
       - name: Publish with Lerna
