@@ -1,6 +1,6 @@
 {
   "name": "@nextcapital/eslint-config-js-linter",
-  "version": "4.0.1",
+  "version": "4.1.0",
   "description": "Nextcapital JS code conventions",
   "main": "index.js",
   "license": "Apache-2.0",
