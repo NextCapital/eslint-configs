@@ -1,6 +1,6 @@
 {
   "name": "@nextcapital/eslint-config-js-linter",
-  "version": "4.0.1",
+  "version": "4.1.0",
   "description": "Nextcapital JS code conventions",
   "main": "index.js",
   "license": "Apache-2.0",
@@ -20,15 +20,15 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-babel": "^5.3.1",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-simple-import-sort": "^7.0.0"
+    "eslint-plugin-simple-import-sort": "^8.0.0"
   },
   "devDependencies": {
     "auto-publish-package": "^2.0.0",
-    "eslint": "^8.15.0",
+    "eslint": "^8.23.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-babel": "^5.3.1",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
     "license-checker-rseidelsohn": "^3.1.0"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@nextcapital/eslint-config-jsdoc-linter",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "ESLint config for JSDoc standards",
   "main": "index.js",
   "license": "Apache-2.0",
@@ -17,12 +17,12 @@
   },
   "peerDependencies": {
     "eslint": ">= 8",
-    "eslint-plugin-jsdoc": "^39.2.9"
+    "eslint-plugin-jsdoc": "^39.3.6"
   },
   "devDependencies": {
     "auto-publish-package": "^2.0.0",
-    "eslint": "^8.15.0",
-    "eslint-plugin-jsdoc": "^39.2.9",
+    "eslint": "^8.23.0",
+    "eslint-plugin-jsdoc": "^39.3.6",
     "license-checker-rseidelsohn": "^3.1.0"
   }
 }
