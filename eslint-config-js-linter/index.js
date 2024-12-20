@@ -7,7 +7,7 @@ module.exports = {
     es6: true
   },
   parserOptions: {
-    ecmaVersion: 6,
+    ecmaVersion: 'latest',
     sourceType: 'module'
   },
 
@@ -24,7 +24,7 @@ module.exports = {
     'no-else-return': ['error', { allowElseIf: true }],
     "no-multiple-empty-lines": ["error", { "max": 1, "maxBOF": 0, "maxEOF": 0 }],
     'no-loop-func': 'off',
-    'no-template-curly-in-string': 'off',
+    'no-template-curly-in-string': 'error',
     'no-underscore-dangle': 'off',
     'object-curly-newline': ['error', {
       'consistent': true,
@@ -32,17 +32,17 @@ module.exports = {
       'multiline': true
     }],
     'one-var': 'off',
-    'one-var-declaration-per-line': 'off',
+    'one-var-declaration-per-line': ['error', 'always'],
     'operator-linebreak': ['error', 'after'],
     'prefer-destructuring': 'off',
     'space-before-function-paren': [
       'error', {'anonymous': 'never', 'named': 'never', 'asyncArrow': 'always'}
     ],
 
-    'babel/semi': 2,
+    'babel/semi': 'warn',
 
     'import/extensions': ['error', 'never'],
-    'import/no-extraneous-dependencies': 1,
+    'import/no-extraneous-dependencies': 'error',
     'import/no-unresolved': 'off'
   },
 
@@ -52,7 +52,8 @@ module.exports = {
       '**/*.test.jsx'
     ],
     rules: {
-      'no-multi-assign': 'off'
+      'no-multi-assign': 'off',
+      'one-var-declaration-per-line': 'off'
     }
   }]
 };
