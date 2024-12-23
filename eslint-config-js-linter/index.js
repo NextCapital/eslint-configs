@@ -1,59 +1,59 @@
-module.exports = {
-  extends: [
-    'airbnb-base'
-  ],
+// module.exports = {
+//   extends: [
+//     'airbnb-base'
+//   ],
 
-  env: {
-    es6: true
-  },
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module'
-  },
+//   env: {
+//     es6: true
+//   },
+//   parserOptions: {
+//     ecmaVersion: 'latest',
+//     sourceType: 'module'
+//   },
 
-  plugins: ['babel'],
+//   plugins: ['babel'],
 
-  rules: {
-    'arrow-parens': ['error', 'always'],
-    'class-methods-use-this': 'off',
-    'comma-dangle': ['error', 'never'],
-    'consistent-return': 'off',
-    'function-paren-newline': 'off',
-    'no-console': ['error'],
-    'no-continue': 'off',
-    'no-else-return': ['error', { allowElseIf: true }],
-    "no-multiple-empty-lines": ["error", { "max": 1, "maxBOF": 0, "maxEOF": 0 }],
-    'no-loop-func': 'off',
-    'no-template-curly-in-string': 'error',
-    'no-underscore-dangle': 'off',
-    'object-curly-newline': ['error', {
-      'consistent': true,
-      'minProperties': 4,
-      'multiline': true
-    }],
-    'one-var': 'off',
-    'one-var-declaration-per-line': ['error', 'always'],
-    'operator-linebreak': ['error', 'after'],
-    'prefer-destructuring': 'off',
-    'space-before-function-paren': [
-      'error', {'anonymous': 'never', 'named': 'never', 'asyncArrow': 'always'}
-    ],
+//   rules: {
+//     'arrow-parens': ['error', 'always'],
+//     'class-methods-use-this': 'off',
+//     'comma-dangle': ['error', 'never'],
+//     'consistent-return': 'off',
+//     'function-paren-newline': 'off',
+//     'no-console': ['error'],
+//     'no-continue': 'off',
+//     'no-else-return': ['error', { allowElseIf: true }],
+//     "no-multiple-empty-lines": ["error", { "max": 1, "maxBOF": 0, "maxEOF": 0 }],
+//     'no-loop-func': 'off',
+//     'no-template-curly-in-string': 'error',
+//     'no-underscore-dangle': 'off',
+//     'object-curly-newline': ['error', {
+//       'consistent': true,
+//       'minProperties': 4,
+//       'multiline': true
+//     }],
+//     'one-var': 'off',
+//     'one-var-declaration-per-line': ['error', 'always'],
+//     'operator-linebreak': ['error', 'after'],
+//     'prefer-destructuring': 'off',
+//     'space-before-function-paren': [
+//       'error', {'anonymous': 'never', 'named': 'never', 'asyncArrow': 'always'}
+//     ],
 
-    'babel/semi': 'warn',
+//     'babel/semi': 'warn',
 
-    'import/extensions': ['error', 'never'],
-    'import/no-extraneous-dependencies': 'error',
-    'import/no-unresolved': 'off'
-  },
+//     'import/extensions': ['error', 'never'],
+//     'import/no-extraneous-dependencies': 'error',
+//     'import/no-unresolved': 'off'
+//   },
 
-  overrides: [{
-    files: [
-      '**/*.test.js',
-      '**/*.test.jsx'
-    ],
-    rules: {
-      'no-multi-assign': 'off',
-      'one-var-declaration-per-line': 'off'
-    }
-  }]
-};
+//   overrides: [{
+//     files: [
+//       '**/*.test.js',
+//       '**/*.test.jsx'
+//     ],
+//     rules: {
+//       'no-multi-assign': 'off',
+//       'one-var-declaration-per-line': 'off'
+//     }
+//   }]
+// };
