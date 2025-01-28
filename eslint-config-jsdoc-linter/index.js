@@ -25,7 +25,7 @@ module.exports = {
     'jsdoc/empty-tags': 'error',
     'jsdoc/implements-on-classes': 'error',
     'jsdoc/match-description': 'off',
-    'jsdoc/newline-after-description': 'error',
+    'jsdoc/no-defaults': 'off',
     'jsdoc/no-types': 'off',
     'jsdoc/no-undefined-types': 'off',
     'jsdoc/require-description': 'off',
@@ -41,6 +41,13 @@ module.exports = {
     'jsdoc/require-returns-check': 'error',
     'jsdoc/require-returns-description': 'off',
     'jsdoc/require-returns-type': 'error',
+    'jsdoc/tag-lines': [
+      'error',
+      'any',
+      {
+        startLines: 1,
+      },
+    ],
     'jsdoc/valid-types': 'error'
   },
   overrides: [{
