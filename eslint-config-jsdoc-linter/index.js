@@ -11,6 +11,11 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: ['jsdoc'],
+  settings: {
+    jsdoc: {
+      mode: "jsdoc"
+    }
+  },
 
   rules: {
     'jsdoc/check-access': 'error',
