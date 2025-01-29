@@ -8,6 +8,9 @@
     "node": ">=16.13.0",
     "npm": ">=8.1.0"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "autopublish": "auto-publish-package",
     "ci": "npm run license",
