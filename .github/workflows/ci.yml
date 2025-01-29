@@ -15,8 +15,6 @@ jobs:
           node-version: '16.x'
       - name: Install Dependencies
         run: npm ci
-      - name: CI Tasks
-        run: npx lerna run ci
       - name: Prepare npm auth
         run: echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > ./.npmrc
       - name: Update index
