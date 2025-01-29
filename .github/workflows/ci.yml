@@ -15,8 +15,6 @@ jobs:
           node-version: '16.x'
       - name: Install Dependencies
         run: npm ci
-      - name: Lerna Bootstrap
-        run: npx lerna bootstrap
       - name: CI Tasks
         run: npx lerna run ci
       - name: Prepare npm auth
@@ -28,7 +26,6 @@ jobs:
           git update-index --assume-unchanged ./eslint-config-js-linter/.npmrc
           git update-index --assume-unchanged ./eslint-config-jsdoc-linter/.npmrc
           git update-index --assume-unchanged ./eslint-config-react-linter/.npmrc
-      - name: go to eslint-config-jsdoc-linter
-        run: cd eslint-config-jsdoc-linter
       - name: Publish with npm
         run: npm publish --access public
+        working-directory: ./eslint-config-jsdoc-linter

@@ -12,6 +12,7 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
+  "private": false,
   "scripts": {
     "autopublish": "auto-publish-package",
     "ci": "npm run license",
