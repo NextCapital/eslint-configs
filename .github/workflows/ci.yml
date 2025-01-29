@@ -17,6 +17,8 @@ jobs:
         run: npm ci
       - name: Prepare npm auth
         run: echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > ./.npmrc
+      - name: Prepare npm auth for leaf project
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ./eslint-config-jsdoc-linter/.npmrc
       - name: Update index
         run: |
           git update-index --assume-unchanged .npmrc
