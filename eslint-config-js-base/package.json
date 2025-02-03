@@ -1,0 +1,27 @@
+{
+  "name": "@nextcapital/eslint-config-js-base",
+  "version": "1.0.0",
+  "description": "Our base JS ESLint config to enforce our styleguide",
+  "main": "index.js",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">= 18",
+    "npm": ">= 9"
+  },
+  "scripts": {
+    "autopublish": "auto-publish-package"
+  },
+  "peerDependencies": {
+    "eslint": ">= 9",
+    "eslint-plugin-import": "^2.30.0"
+  },
+  "dependencies": {
+    "confusing-browser-globals": "^1.0.11",
+    "globals": "^15.14.0"
+  },
+  "devDependencies": {
+    "auto-publish-package": "^2.0.0",
+    "eslint": ">= 9",
+    "eslint-plugin-import": "^2.30.0"
+  }
+}
