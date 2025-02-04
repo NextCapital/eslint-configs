@@ -1,12 +1,12 @@
 {
-  "name": "@nextcapital/eslint-config-js-base",
+  "name": "@nextcapital/eslint-config",
   "version": "1.0.0",
   "description": "Our base JS ESLint config to enforce our styleguide",
   "main": "index.js",
   "license": "Apache-2.0",
   "engines": {
     "node": ">= 18",
-    "npm": ">= 9"
+    "npm": ">= 10"
   },
   "scripts": {
     "autopublish": "auto-publish-package"
