@@ -1,4 +1,7 @@
+import js from "@eslint/js";
+
 module.exports = [
+  ...js.configs.all,
   ...([
     './base-rules/flat/best-practices',
     './base-rules/flat/errors',
