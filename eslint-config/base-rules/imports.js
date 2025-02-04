@@ -19,14 +19,14 @@ module.exports = {
     'import/extensions': [
       '.js',
       '.mjs',
-      '.jsx',
+      '.jsx'
     ],
     'import/core-modules': [
     ],
     'import/ignore': [
       'node_modules',
-      '\\.(coffee|scss|css|less|hbs|svg|json)$',
-    ],
+      '\\.(coffee|scss|css|less|hbs|svg|json)$'
+    ]
   },
 
   rules: {
@@ -93,7 +93,7 @@ module.exports = {
         '**/karma.conf.js', // karma config
         '**/.eslintrc.js' // eslint config
       ],
-      optionalDependencies: false,
+      optionalDependencies: false
     }],
 
     // Forbid mutable exports
@@ -171,7 +171,7 @@ module.exports = {
     // prevent importing the submodules of other modules
     // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-internal-modules.md
     'import/no-internal-modules': ['off', {
-      allow: [],
+      allow: []
     }],
 
     // Warn if a module could be mistakenly parsed as a script by a consumer
@@ -202,7 +202,7 @@ module.exports = {
       allowAnonymousClass: false,
       allowAnonymousFunction: false,
       allowLiteral: false,
-      allowObject: false,
+      allowObject: false
     }],
 
     // This rule enforces that all exports are declared at the bottom of the file.
@@ -240,7 +240,7 @@ module.exports = {
     // https://github.com/import-js/eslint-plugin-import/blob/ebafcbf59ec9f653b2ac2a0156ca3bcba0a7cf57/docs/rules/dynamic-import-chunkname.md
     'import/dynamic-import-chunkname': ['off', {
       importFunctions: [],
-      webpackChunknameFormat: '[0-9a-zA-Z-_/.]+',
+      webpackChunknameFormat: '[0-9a-zA-Z-_/.]+'
     }],
 
     // Use this rule to prevent imports to folders in relative parent paths.
@@ -253,13 +253,13 @@ module.exports = {
     'import/no-unused-modules': ['off', {
       ignoreExports: [],
       missingExports: true,
-      unusedExports: true,
+      unusedExports: true
     }],
 
     // Reports the use of import declarations with CommonJS exports in any module except for the main module.
     // https://github.com/import-js/eslint-plugin-import/blob/1012eb951767279ce3b540a4ec4f29236104bb5b/docs/rules/no-import-module-exports.md
     'import/no-import-module-exports': ['error', {
-      exceptions: [],
+      exceptions: []
     }],
 
     // Use this rule to prevent importing packages through relative paths.
@@ -274,6 +274,6 @@ module.exports = {
     // Reports the use of empty named import blocks.
     // https://github.com/import-js/eslint-plugin-import/blob/d5fc8b670dc8e6903dbb7b0894452f60c03089f5/docs/rules/no-empty-named-blocks.md
     // TODO, semver-minor: enable
-    'import/no-empty-named-blocks': 'off',
-  },
+    'import/no-empty-named-blocks': 'off'
+  }
 };

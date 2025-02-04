@@ -45,7 +45,7 @@ module.exports = {
 
     // enforces consistent newlines before or after dots
     // https://eslint.org/docs/rules/dot-location
-    'dot-location': ['error', 'property'],
+    '@stylistic/dot-location': ['error', 'property'],
 
     // require the use of === and !==
     // https://eslint.org/docs/rules/eqeqeq
@@ -94,7 +94,7 @@ module.exports = {
       allow: [
         'arrowFunctions',
         'functions',
-        'methods',
+        'methods'
       ]
     }],
 
@@ -133,7 +133,7 @@ module.exports = {
 
     // disallow the use of leading or trailing decimal points in numeric literals
     // https://eslint.org/docs/rules/no-floating-decimal
-    'no-floating-decimal': 'error',
+    '@stylistic/no-floating-decimal': 'error',
 
     // disallow reassignments of native objects or read-only globals
     // https://eslint.org/docs/rules/no-global-assign
@@ -149,7 +149,7 @@ module.exports = {
       boolean: false,
       number: true,
       string: true,
-      allow: [],
+      allow: []
     }],
 
     // disallow var and named functions in global scope
@@ -186,13 +186,13 @@ module.exports = {
       ignore: [],
       ignoreArrayIndexes: true,
       enforceConst: true,
-      detectObjects: false,
+      detectObjects: false
     }],
 
     // disallow use of multiple spaces
     // https://eslint.org/docs/rules/no-multi-spaces
-    'no-multi-spaces': ['error', {
-      ignoreEOLComments: false,
+    '@stylistic/no-multi-spaces': ['error', {
+      ignoreEOLComments: false
     }],
 
     // disallow use of multiline strings
@@ -245,7 +245,7 @@ module.exports = {
         'res', // for Express responses
         'response', // for Express responses
         '$scope', // for Angular 1 scopes
-        'staticContext', // for ReactRouter context
+        'staticContext' // for ReactRouter context
       ]
     }],
 
@@ -262,41 +262,41 @@ module.exports = {
     'no-restricted-properties': ['error', {
       object: 'arguments',
       property: 'callee',
-      message: 'arguments.callee is deprecated',
+      message: 'arguments.callee is deprecated'
     }, {
       object: 'global',
       property: 'isFinite',
-      message: 'Please use Number.isFinite instead',
+      message: 'Please use Number.isFinite instead'
     }, {
       object: 'self',
       property: 'isFinite',
-      message: 'Please use Number.isFinite instead',
+      message: 'Please use Number.isFinite instead'
     }, {
       object: 'window',
       property: 'isFinite',
-      message: 'Please use Number.isFinite instead',
+      message: 'Please use Number.isFinite instead'
     }, {
       object: 'global',
       property: 'isNaN',
-      message: 'Please use Number.isNaN instead',
+      message: 'Please use Number.isNaN instead'
     }, {
       object: 'self',
       property: 'isNaN',
-      message: 'Please use Number.isNaN instead',
+      message: 'Please use Number.isNaN instead'
     }, {
       object: 'window',
       property: 'isNaN',
-      message: 'Please use Number.isNaN instead',
+      message: 'Please use Number.isNaN instead'
     }, {
       property: '__defineGetter__',
-      message: 'Please use Object.defineProperty instead.',
+      message: 'Please use Object.defineProperty instead.'
     }, {
       property: '__defineSetter__',
-      message: 'Please use Object.defineProperty instead.',
+      message: 'Please use Object.defineProperty instead.'
     }, {
       object: 'Math',
       property: 'pow',
-      message: 'Use the exponentiation operator (**) instead.',
+      message: 'Use the exponentiation operator (**) instead.'
     }],
 
     // disallow use of assignment in return statement
@@ -314,7 +314,7 @@ module.exports = {
     // disallow self assignment
     // https://eslint.org/docs/rules/no-self-assign
     'no-self-assign': ['error', {
-      props: true,
+      props: true
     }],
 
     // disallow comparisons where both sides are exactly the same
@@ -338,7 +338,7 @@ module.exports = {
     'no-unused-expressions': ['error', {
       allowShortCircuit: false,
       allowTernary: false,
-      allowTaggedTemplates: false,
+      allowTaggedTemplates: false
     }],
 
     // disallow unused labels
@@ -392,7 +392,7 @@ module.exports = {
 
     // https://eslint.org/docs/rules/prefer-regex-literals
     'prefer-regex-literals': ['error', {
-      disallowRedundantWrapping: true,
+      disallowRedundantWrapping: true
     }],
 
     // require use of the second argument for parseInt()
@@ -413,7 +413,7 @@ module.exports = {
 
     // require immediate function invocation to be wrapped in parentheses
     // https://eslint.org/docs/rules/wrap-iife.html
-    'wrap-iife': ['error', 'outside', { functionPrototypeMethods: false }],
+    '@stylistic/wrap-iife': ['error', 'outside', { functionPrototypeMethods: false }],
 
     // require or disallow Yoda conditions
     // https://eslint.org/docs/rules/yoda

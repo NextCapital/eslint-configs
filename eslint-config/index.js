@@ -1,11 +1,8 @@
-import js from '@eslint/js';
-import stylistic from '@stylistic/eslint-plugin'
+const js = require('@eslint/js');
+const stylistic = require('@stylistic/eslint-plugin');
 
 module.exports = [
   {
-    env: {
-      es6: true
-    },
     languageOptions: {
       parserOptions: {
         ecmaVersion: 2016,
@@ -34,8 +31,11 @@ module.exports = [
     './base-rules/flat/variables',
     './base-rules/flat/es6',
     './base-rules/flat/imports',
-    './base-rules/flat/strict',
-  ].reduce((p, c) => p.concat(require(c)), [])), // eslint-disable-line global-require, import/no-dynamic-require
+    './base-rules/flat/strict'
+  ].reduce(
+    (p, c) => p.concat(require(c)),
+    []
+  )),
   {
     files: [
       '**/*.test.js',
