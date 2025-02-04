@@ -38,14 +38,8 @@ module.exports = {
       },
     }],
 
-    // require trailing commas in multiline object literals
-    'comma-dangle': ['error', {
-      arrays: 'always-multiline',
-      objects: 'always-multiline',
-      imports: 'always-multiline',
-      exports: 'always-multiline',
-      functions: 'always-multiline',
-    }],
+    // forbid trailing commas in multiline object literals
+    'comma-dangle': ['error', 'never'],
 
     // enforce spacing before and after comma
     'comma-spacing': ['error', { before: false, after: true }],
@@ -102,7 +96,7 @@ module.exports = {
 
     // require line breaks inside function parentheses if there are line breaks between parameters
     // https://eslint.org/docs/rules/function-paren-newline
-    'function-paren-newline': ['error', 'multiline-arguments'],
+    'function-paren-newline': 'off',
 
     // disallow specified identifiers
     // https://eslint.org/docs/rules/id-denylist
@@ -282,7 +276,7 @@ module.exports = {
 
     // disallow use of the continue statement
     // https://eslint.org/docs/rules/no-continue
-    'no-continue': 'error',
+    'no-continue': 'off',
 
     // disallow comments inline after code
     'no-inline-comments': 'off',
@@ -375,12 +369,7 @@ module.exports = {
 
     // disallow dangling underscores in identifiers
     // https://eslint.org/docs/rules/no-underscore-dangle
-    'no-underscore-dangle': ['error', {
-      allow: [],
-      allowAfterThis: false,
-      allowAfterSuper: false,
-      enforceInMethodNames: true,
-    }],
+    'no-underscore-dangle': 'off', // TODO: Turn back on lol
 
     // disallow the use of Boolean literals in conditional expressions
     // also, prefer `a || b` over `a ? a : b`
@@ -414,11 +403,11 @@ module.exports = {
     }],
 
     // allow just one var statement per function
-    'one-var': ['error', 'never'],
+    'one-var': 'off',
 
     // require a newline around variable declaration
     // https://eslint.org/docs/rules/one-var-declaration-per-line
-    'one-var-declaration-per-line': ['error', 'always'],
+    'one-var-declaration-per-line': 'off',
 
     // require assignment operator shorthand where possible or prohibit it entirely
     // https://eslint.org/docs/rules/operator-assignment
@@ -426,7 +415,7 @@ module.exports = {
 
     // Requires operator at the beginning of the line in multiline statements
     // https://eslint.org/docs/rules/operator-linebreak
-    'operator-linebreak': ['error', 'before', { overrides: { '=': 'none' } }],
+    'operator-linebreak': ['error', 'after'],
 
     // disallow padding within blocks
     'padded-blocks': ['error', {
@@ -482,7 +471,7 @@ module.exports = {
     // require or disallow space before function opening parenthesis
     // https://eslint.org/docs/rules/space-before-function-paren
     'space-before-function-paren': ['error', {
-      anonymous: 'always',
+      anonymous: 'never',
       named: 'never',
       asyncArrow: 'always'
     }],

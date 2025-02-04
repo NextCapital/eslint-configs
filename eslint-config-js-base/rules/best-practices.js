@@ -18,13 +18,11 @@ module.exports = {
 
     // enforce that class methods use "this"
     // https://eslint.org/docs/rules/class-methods-use-this
-    'class-methods-use-this': ['error', {
-      exceptMethods: [],
-    }],
+    'class-methods-use-this': 'off',
 
     // require return statements to either always or never specify values
     // https://eslint.org/docs/rules/consistent-return
-    'consistent-return': 'error',
+    'consistent-return': 'off',
 
     // specify curly brace conventions for all control statements
     // https://eslint.org/docs/rules/curly
@@ -88,7 +86,7 @@ module.exports = {
 
     // disallow else after a return in an if
     // https://eslint.org/docs/rules/no-else-return
-    'no-else-return': ['error', { allowElseIf: false }],
+    'no-else-return': ['error', { allowElseIf: true }],
 
     // disallow empty functions, except for standalone funcs/arrows
     // https://eslint.org/docs/rules/no-empty-function
@@ -180,7 +178,7 @@ module.exports = {
 
     // disallow creation of functions within loops
     // https://eslint.org/docs/rules/no-loop-func
-    'no-loop-func': 'error',
+    'no-loop-func': 'off',
 
     // disallow magic numbers
     // https://eslint.org/docs/rules/no-magic-numbers

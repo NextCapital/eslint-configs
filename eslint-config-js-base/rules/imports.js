@@ -34,7 +34,7 @@ module.exports = {
 
     // ensure imports point to files/modules that can be resolved
     // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md
-    'import/no-unresolved': ['error', { commonjs: true, caseSensitive: true }],
+    'import/no-unresolved': 'off',
 
     // ensure named imports coupled with named exports
     // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/named.md#when-not-to-use-it
@@ -68,7 +68,7 @@ module.exports = {
     // Forbid the use of extraneous packages
     // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
     // paths are treated both as absolute paths, and relative to process.cwd()
-    'import/no-extraneous-dependencies': ['error', {
+    'import/no-extraneous-dependencies': ['warn', {
       devDependencies: [
         'test/**', // tape, common npm pattern
         'tests/**', // also common npm pattern
@@ -137,11 +137,7 @@ module.exports = {
 
     // Ensure consistent use of file extension within the import path
     // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/extensions.md
-    'import/extensions': ['error', 'ignorePackages', {
-      js: 'never',
-      mjs: 'never',
-      jsx: 'never',
-    }],
+    'import/extensions': ['error', 'never'],
 
     // ensure absolute imports are above relative imports and that unassigned imports are ignored
     // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/order.md
