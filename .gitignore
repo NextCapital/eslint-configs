@@ -4,3 +4,6 @@ npm-debug.log
 
 # artifacts
 .DS_Store
+
+# caches
+.eslintcache

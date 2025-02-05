@@ -1,0 +1,35 @@
+{
+  "name": "@nextcapital/eslint-config",
+  "version": "1.0.0",
+  "description": "ESLint config to enforce our styleguide",
+  "main": "index.js",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">= 18",
+    "npm": ">= 10"
+  },
+  "scripts": {
+    "autopublish": "auto-publish-package",
+    "ci:local": "npm run lint",
+    "inspect-config": "eslint --inspect-config --config=index.js",
+    "lint": "eslint --config=index.js --cache --report-unused-disable-directives --report-unused-inline-configs error"
+  },
+  "peerDependencies": {
+    "eslint": ">= 9",
+    "eslint-plugin-import": "^2.30.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.26.7",
+    "@babel/eslint-parser": "^7.26.5",
+    "@eslint/js": "^9.19.0",
+    "@stylistic/eslint-plugin": "^3.0.1",
+    "confusing-browser-globals": "^1.0.11",
+    "globals": "^15.14.0",
+    "eslint-plugin-n": "^17.15.1"
+  },
+  "devDependencies": {
+    "auto-publish-package": "^2.0.0",
+    "eslint": "^9.19.0",
+    "eslint-plugin-import": "^2.30.0"
+  }
+}
