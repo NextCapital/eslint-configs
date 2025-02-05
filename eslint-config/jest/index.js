@@ -1,0 +1,39 @@
+const babelParser = require('@babel/eslint-parser');
+
+const pluginJest = require('eslint-plugin-jest');
+
+const nextcapitalJest = require('./flat/rules');
+
+module.exports = [
+  {
+    name: 'Jest Plugin Setup',
+    languageOptions: {
+      globals: pluginJest.environments.globals.globals,
+      parser: babelParser,
+      parserOptions: {
+        ecmaVersion: 2016,
+        sourceType: 'module',
+
+        requireConfigFile: false
+      }
+    },
+    files: [
+      '**/*.{spec,test}.{js,ts,mjs,cjs,jsx,tsx}'
+    ],
+    ignores: [
+      '.git/',
+      '**/node_modules/',
+      '**/build/',
+      '**/dist/',
+      '**/ts-output/'
+    ],
+    plugins: {
+      jest: pluginJest
+    }
+  },
+  {
+    name: 'jest - Enable all rules',
+    ...pluginJest.configs['flat/all']
+  },
+  ...nextcapitalJest
+];
