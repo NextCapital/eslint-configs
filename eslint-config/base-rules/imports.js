@@ -256,7 +256,8 @@ module.exports = {
       unusedExports: true
     }],
 
-    // Reports the use of import declarations with CommonJS exports in any module except for the main module.
+    // Reports the use of import declarations with CommonJS exports in any module except for the
+    // main module.
     // https://github.com/import-js/eslint-plugin-import/blob/1012eb951767279ce3b540a4ec4f29236104bb5b/docs/rules/no-import-module-exports.md
     'import/no-import-module-exports': ['error', {
       exceptions: []

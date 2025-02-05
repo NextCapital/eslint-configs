@@ -415,8 +415,13 @@ module.exports = {
     // Require or disallow padding lines between statements
     // https://eslint.org/docs/rules/padding-line-between-statements
     '@stylistic/padding-line-between-statements': ['error', {
-      before: 'always',
-      after: 'always'
+      blankLine: 'always',
+      prev: 'directive',
+      next: '*'
+    }, {
+      blankLine: 'any',
+      prev: 'directive',
+      next: 'directive'
     }],
 
     // Disallow the use of Math.pow in favor of the ** operator
