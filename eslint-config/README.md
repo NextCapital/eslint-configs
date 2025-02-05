@@ -48,8 +48,6 @@ This config contains all rules for testing with jest. This config does not exten
 
 ```js
 // eslint.config.cjs
-const nextcapitalBase, { jestConfig } = require('@nextcapital/eslint-config');
-// OR
 const jestConfig = require('@nextcapital/eslint-config/jest');
 
 module.exports = [
@@ -60,8 +58,6 @@ module.exports = [
 
 ```js
 // eslint.config.mjs
-import nextcapitalBase, { jestConfig } from '@nextcapital/eslint-config';
-// OR
 import jestConfig from '@nextcapital/eslint-config/jest';
 
 export default [
@@ -78,8 +74,6 @@ This config contains all rules for developing with React/jsx. This config does n
 
 ```js
 // eslint.config.cjs
-const nextcapitalBase, { reactConfig } = require('@nextcapital/eslint-config');
-// OR
 const reactConfig = require('@nextcapital/eslint-config/react');
 
 module.exports = [
@@ -90,8 +84,6 @@ module.exports = [
 
 ```js
 // eslint.config.mjs
-import nextcapitalBase, { reactConfig } from '@nextcapital/eslint-config';
-// OR
 import reactConfig from '@nextcapital/eslint-config/react';
 
 export default [
@@ -108,8 +100,6 @@ This config contains all rules for developing with TypeScript. This config does 
 
 ```js
 // eslint.config.cjs
-const { typescriptConfig } = require('@nextcapital/eslint-config');
-// OR
 const typescriptConfig = require('@nextcapital/eslint-config/typescript');
 
 module.exports = [
@@ -120,8 +110,6 @@ module.exports = [
 
 ```js
 // eslint.config.mjs
-import { typescriptConfig } from '@nextcapital/eslint-config';
-// OR
 import typescriptConfig from '@nextcapital/eslint-config/typescript';
 
 export default [
