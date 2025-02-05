@@ -11,7 +11,7 @@
   "scripts": {
     "autopublish": "auto-publish-package",
     "inspect-config": "eslint --inspect-config --config=index.js",
-    "lint": "eslint --config=index.js --cache"
+    "lint": "eslint --config=index.js --cache --report-unused-disable-directives --report-unused-inline-configs error"
   },
   "peerDependencies": {
     "eslint": ">= 9",
