@@ -39,7 +39,7 @@ module.exports = {
 
     // disallow arrow functions where they could be confused with comparisons
     // https://eslint.org/docs/rules/no-confusing-arrow
-    'no-confusing-arrow': ['error', {
+    '@stylistic/no-confusing-arrow': ['error', {
       allowParens: true
     }],
 
@@ -57,7 +57,7 @@ module.exports = {
 
     // disallow symbol constructor
     // https://eslint.org/docs/rules/no-new-symbol
-    'no-new-symbol': 'error',
+    'no-new-native-nonconstructor': 'error',
 
     // Disallow specified names in exports
     // https://eslint.org/docs/rules/no-restricted-exports
@@ -147,7 +147,7 @@ module.exports = {
 
     // enforce spacing between object rest-spread
     // https://eslint.org/docs/rules/rest-spread-spacing
-    'rest-spread-spacing': ['error', 'never'],
+    '@stylistic/rest-spread-spacing': ['error', 'never'],
 
     // import sorting
     // https://eslint.org/docs/rules/sort-imports

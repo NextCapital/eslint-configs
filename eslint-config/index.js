@@ -1,8 +1,10 @@
 const js = require('@eslint/js');
 const stylistic = require('@stylistic/eslint-plugin');
+const nodePlugin = require("eslint-plugin-n")
 
 module.exports = [
   {
+    name: 'Default JS All Rules ON',
     languageOptions: {
       parserOptions: {
         ecmaVersion: 2016,
@@ -19,10 +21,19 @@ module.exports = [
       '**/dist/',
       '**/ts-output/'
     ],
+    plugins: {
+      n: nodePlugin
+    },
     rules: js.configs.all.rules
   },
-  stylistic.configs['disable-legacy'],
-  stylistic.configs['all-flat'],
+  {
+    name: '@stylistic - Disable all legacy rules',
+    ...stylistic.configs['disable-legacy'],
+  },
+  {
+    name: '@stylistic - Enable all style rules',
+    ...stylistic.configs['all-flat']
+  },
   ...([
     './base-rules/flat/best-practices',
     './base-rules/flat/errors',
@@ -37,6 +48,7 @@ module.exports = [
     []
   )),
   {
+    name: 'Test file specific rules',
     files: [
       '**/*.test.js',
       '**/*.test.jsx'

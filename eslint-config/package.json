@@ -9,7 +9,8 @@
     "npm": ">= 10"
   },
   "scripts": {
-    "autopublish": "auto-publish-package"
+    "autopublish": "auto-publish-package",
+    "inspect-config": "npx eslint --inspect-config --config=index.js"
   },
   "peerDependencies": {
     "eslint": ">= 9",
@@ -24,6 +25,7 @@
   "devDependencies": {
     "auto-publish-package": "^2.0.0",
     "eslint": "^9.19.0",
-    "eslint-plugin-import": "^2.30.0"
+    "eslint-plugin-import": "^2.30.0",
+    "eslint-plugin-n": "^17.15.1"
   }
 }

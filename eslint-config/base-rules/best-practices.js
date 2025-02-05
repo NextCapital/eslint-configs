@@ -218,7 +218,7 @@ module.exports = {
     // Disallow calls to the Object constructor without an argument
     // https://eslint.org/docs/latest/rules/no-object-constructor
     // TODO: enable, semver-major
-    'no-object-constructor': 'off',
+    'no-object-constructor': 'error',
 
     // disallow use of (old style) octal literals
     // https://eslint.org/docs/rules/no-octal
@@ -302,10 +302,6 @@ module.exports = {
     // disallow use of assignment in return statement
     // https://eslint.org/docs/rules/no-return-assign
     'no-return-assign': ['error', 'always'],
-
-    // disallow redundant `return await`
-    // https://eslint.org/docs/rules/no-return-await
-    'no-return-await': 'error',
 
     // disallow use of `javascript:` urls.
     // https://eslint.org/docs/rules/no-script-url

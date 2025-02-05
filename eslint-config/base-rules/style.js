@@ -71,11 +71,11 @@ module.exports = {
     '@stylistic/eol-last': ['error', 'always'],
 
     // https://eslint.org/docs/rules/function-call-argument-newline
-    'function-call-argument-newline': ['error', 'consistent'],
+    '@stylistic/function-call-argument-newline': ['error', 'consistent'],
 
     // enforce spacing between functions and their invocations
     // https://eslint.org/docs/rules/func-call-spacing
-    'func-call-spacing': ['error', 'never'],
+    '@stylistic/function-call-spacing': ['error', 'never'],
 
     // requires function names to match the name of the variable or property to which they are
     // assigned
@@ -94,10 +94,6 @@ module.exports = {
     // TODO: enable
     'func-style': ['off', 'expression'],
 
-    // require line breaks inside function parentheses if there are line breaks between parameters
-    // https://eslint.org/docs/rules/function-paren-newline
-    'function-paren-newline': 'off',
-
     // disallow specified identifiers
     // https://eslint.org/docs/rules/id-denylist
     'id-denylist': 'off',
@@ -111,7 +107,7 @@ module.exports = {
 
     // Enforce the location of arrow function bodies with implicit returns
     // https://eslint.org/docs/rules/implicit-arrow-linebreak
-    'implicit-arrow-linebreak': ['error', 'beside'],
+    '@stylistic/implicit-arrow-linebreak': ['error', 'beside'],
 
     // this option sets a specific tab width for your code
     // https://eslint.org/docs/rules/indent
@@ -177,13 +173,6 @@ module.exports = {
 
     // enforces empty lines around comments
     '@stylistic/lines-around-comment': 'off',
-
-    // require or disallow newlines around directives
-    // https://eslint.org/docs/rules/lines-around-directive
-    'lines-around-directive': ['error', {
-      before: 'always',
-      after: 'always'
-    }],
 
     // Require or disallow logical assignment logical operator shorthand
     // https://eslint.org/docs/latest/rules/logical-assignment-operators
@@ -322,9 +311,6 @@ module.exports = {
     // disallow nested ternary expressions
     'no-nested-ternary': 'error',
 
-    // disallow use of the Object constructor
-    'no-new-object': 'error',
-
     // disallow use of unary operators, ++ and --
     // https://eslint.org/docs/rules/no-plusplus
     'no-plusplus': 'error',
@@ -428,7 +414,10 @@ module.exports = {
 
     // Require or disallow padding lines between statements
     // https://eslint.org/docs/rules/padding-line-between-statements
-    '@stylistic/padding-line-between-statements': 'off',
+    '@stylistic/padding-line-between-statements': ['error', {
+      before: 'always',
+      after: 'always'
+    }],
 
     // Disallow the use of Math.pow in favor of the ** operator
     // https://eslint.org/docs/rules/prefer-exponentiation-operator
@@ -453,7 +442,7 @@ module.exports = {
     '@stylistic/semi': ['error', 'always'],
 
     // enforce spacing before and after semicolons
-    'semi-spacing': ['error', { before: false, after: true }],
+    '@stylistic/semi-spacing': ['error', { before: false, after: true }],
 
     // Enforce location of semicolons
     // https://eslint.org/docs/rules/semi-style
@@ -466,7 +455,7 @@ module.exports = {
     'sort-vars': 'off',
 
     // require or disallow space before blocks
-    'space-before-blocks': 'error',
+    '@stylistic/space-before-blocks': 'error',
 
     // require or disallow space before function opening parenthesis
     // https://eslint.org/docs/rules/space-before-function-paren
