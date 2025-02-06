@@ -17,6 +17,7 @@
     "ci:local": "npm run lint",
     "inspect-config:base": "eslint --inspect-config --config=index.js",
     "inspect-config:jest": "eslint --inspect-config --config=jest/index.js",
+    "inspect-config:jsdoc": "eslint --inspect-config --config=jsdoc/index.js",
     "lint": "eslint --config=index.js --cache --report-unused-disable-directives --report-unused-inline-configs error"
   },
   "peerDependencies": {
@@ -30,6 +31,7 @@
     "@stylistic/eslint-plugin": "^3.0.1",
     "confusing-browser-globals": "^1.0.11",
     "eslint-plugin-jest": "^28.11.0",
+    "eslint-plugin-jsdoc": "^50.6.3",
     "eslint-plugin-n": "^17.15.1",
     "globals": "^15.14.0"
   },
