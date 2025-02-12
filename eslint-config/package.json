@@ -19,7 +19,7 @@
     "inspect-config:jest": "eslint --inspect-config --config=jest/index.js",
     "inspect-config:jsdoc": "eslint --inspect-config --config=jsdoc/index.js",
     "inspect-config:react": "eslint --inspect-config --config=react/index.js",
-    "lint": "eslint --config=index.js --cache --report-unused-disable-directives --report-unused-inline-configs error"
+    "lint": "eslint --config=index.js --cache"
   },
   "peerDependencies": {
     "eslint": ">= 9",

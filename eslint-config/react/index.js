@@ -24,6 +24,10 @@ module.exports = [
         ...globals.browser,
       },
     },
+    linterOptions: {
+      reportUnusedDisableDirectives: 'error',
+      reportUnusedInlineConfigs: 'error'
+    },
     files: [
       '**/*.{js,mjs,cjs,jsx}'
     ],
