@@ -21,8 +21,8 @@ module.exports = [
       },
       globals: {
         ...globals.serviceworker,
-        ...globals.browser,
-      },
+        ...globals.browser
+      }
     },
     linterOptions: {
       reportUnusedDisableDirectives: 'error',
@@ -45,14 +45,13 @@ module.exports = [
   },
   {
     name: 'React - Enable recommended rules as errors',
-    ...pluginReact.configs.flat.recommended, // This is not a plugin object, but a shareable config object
-    ...pluginReact.configs.flat['jsx-runtime'], // Add this if you are using React 17+
+    ...pluginReact.configs.flat.recommended,
+    ...pluginReact.configs.flat['jsx-runtime'] // Add this if you are using React 17+
   },
   jsxA11y.flatConfigs.recommended,
   ...nextcapitalReact,
   {
     files: [
-      '**/*.{spec,test}.{js,mjs,cjs,jsx}',
       '**/*.{spec,test}.{js,mjs,cjs,jsx}'
     ],
     rules: {

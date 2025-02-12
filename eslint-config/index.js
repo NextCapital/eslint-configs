@@ -60,8 +60,7 @@ module.exports = [
   {
     name: 'Test file specific rules',
     files: [
-      '**/*.test.js',
-      '**/*.test.jsx'
+      '**/*.{spec,test}.{js,mjs,cjs,jsx}'
     ],
     rules: {
       'no-multi-assign': 'off'

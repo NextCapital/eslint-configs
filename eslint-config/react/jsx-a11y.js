@@ -12,7 +12,7 @@ module.exports = {
       img: [],
       object: [],
       area: [],
-      'input[type="image"]': [],
+      'input[type="image"]': []
     }],
 
     // Enforce that anchors have content
@@ -24,7 +24,7 @@ module.exports = {
     'jsx-a11y/anchor-is-valid': ['warn', {
       components: ['Link'],
       specialLink: ['to'],
-      aspects: ['noHref', 'invalidHref', 'preferButton'],
+      aspects: ['noHref', 'invalidHref', 'preferButton']
     }],
 
     // elements with aria-activedescendant must be tabbable
@@ -51,7 +51,7 @@ module.exports = {
     // Ensure the autocomplete attribute is correct and suitable for the form field it is used with
     // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/29c68596b15c4ff0a40daae6d4a2670e36e37d35/docs/rules/autocomplete-valid.md
     'jsx-a11y/autocomplete-valid': ['off', {
-      inputComponents: [],
+      inputComponents: []
     }],
 
     // require onClick be accompanied by onKeyUp/onKeyDown/onKeyPress
@@ -70,7 +70,7 @@ module.exports = {
         'input',
         'textarea',
         'tr',
-        'video',
+        'video'
       ],
       ignoreRoles: [
         'grid',
@@ -82,9 +82,9 @@ module.exports = {
         'tablist',
         'toolbar',
         'tree',
-        'treegrid',
+        'treegrid'
       ],
-      depth: 5,
+      depth: 5
     }],
 
     // ensure <hX> tags have content and are not aria-hidden
@@ -126,7 +126,7 @@ module.exports = {
     'jsx-a11y/media-has-caption': ['warn', {
       audio: [],
       video: [],
-      track: [],
+      track: []
     }],
 
     // require that mouseover/out come with focus/blur, for keyboard-only users
@@ -144,13 +144,13 @@ module.exports = {
     // prevent distracting elements, like <marquee> and <blink>
     // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-distracting-elements.md
     'jsx-a11y/no-distracting-elements': ['warn', {
-      elements: ['marquee', 'blink'],
+      elements: ['marquee', 'blink']
     }],
 
     // WAI-ARIA roles should not be used to convert an interactive element to non-interactive
     // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-interactive-element-to-noninteractive-role.md
     'jsx-a11y/no-interactive-element-to-noninteractive-role': ['warn', {
-      tr: ['none', 'presentation'],
+      tr: ['none', 'presentation']
     }],
 
     // A non-interactive element does not support event handlers (mouse and key handlers)
@@ -162,7 +162,7 @@ module.exports = {
         'onMouseUp',
         'onKeyPress',
         'onKeyDown',
-        'onKeyUp',
+        'onKeyUp'
       ]
     }],
 
@@ -173,7 +173,7 @@ module.exports = {
       ol: ['listbox', 'menu', 'menubar', 'radiogroup', 'tablist', 'tree', 'treegrid'],
       li: ['menuitem', 'option', 'row', 'tab', 'treeitem'],
       table: ['grid'],
-      td: ['gridcell'],
+      td: ['gridcell']
     }],
 
     // Tab key navigation should be limited to elements on the page that can be interacted with.
@@ -181,7 +181,7 @@ module.exports = {
     'jsx-a11y/no-noninteractive-tabindex': ['warn', {
       tags: [],
       roles: ['tabpanel'],
-      allowExpressionValues: true,
+      allowExpressionValues: true
     }],
 
     // require onBlur instead of onChange
@@ -191,7 +191,7 @@ module.exports = {
     // ensure HTML elements do not specify redundant ARIA roles
     // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-redundant-roles.md
     'jsx-a11y/no-redundant-roles': ['warn', {
-      nav: ['navigation'],
+      nav: ['navigation']
     }],
 
     // Enforce that DOM elements without semantic behavior not have interaction handlers
@@ -203,7 +203,7 @@ module.exports = {
         'onMouseUp',
         'onKeyPress',
         'onKeyDown',
-        'onKeyUp',
+        'onKeyUp'
       ]
     }],
 
@@ -235,9 +235,9 @@ module.exports = {
     'jsx-a11y/label-has-for': ['off', {
       components: [],
       required: {
-        every: ['nesting', 'id'],
+        every: ['nesting', 'id']
       },
-      allowChildren: false,
+      allowChildren: false
     }],
 
     // Ensures anchor text is not ambiguous

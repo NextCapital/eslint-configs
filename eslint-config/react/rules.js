@@ -18,7 +18,7 @@ module.exports = {
         'componentWillUnmount',
         'componentDidCatch',
         'getSnapshotBeforeUpdate'
-      ],
+      ]
     }],
 
     // This rule enforces onChange or readonly attribute for checked property of input elements.
@@ -37,7 +37,7 @@ module.exports = {
     'react/forbid-prop-types': ['error', {
       forbid: ['any', 'array', 'object'],
       checkContextTypes: true,
-      checkChildContextTypes: true,
+      checkChildContextTypes: true
     }],
 
     // Forbid certain props on DOM Nodes
@@ -64,7 +64,7 @@ module.exports = {
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-handler-names.md
     'react/jsx-handler-names': ['off', {
       eventHandlerPrefix: 'handle',
-      eventHandlerPropPrefix: 'on',
+      eventHandlerPropPrefix: 'on'
     }],
 
     // Validate props indentation in JSX
@@ -87,7 +87,7 @@ module.exports = {
       allowArrowFunctions: true,
       allowFunctions: false,
       allowBind: false,
-      ignoreDOMComponents: true,
+      ignoreDOMComponents: true
     }],
 
     // Prevent duplicate props in JSX
@@ -106,7 +106,7 @@ module.exports = {
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md
     'react/jsx-pascal-case': ['error', {
       allowAllCaps: true,
-      ignore: [],
+      ignore: []
     }],
 
     // Enforce propTypes declarations alphabetical sorting
@@ -115,7 +115,7 @@ module.exports = {
       ignoreCase: true,
       callbacksLast: false,
       requiredFirst: false,
-      sortShapeProp: true,
+      sortShapeProp: true
     }],
 
     // Deprecated in favor of react/jsx-sort-props
@@ -129,13 +129,13 @@ module.exports = {
       shorthandFirst: false,
       shorthandLast: false,
       noSortAlphabetically: false,
-      reservedFirst: true,
+      reservedFirst: true
     }],
 
     // Enforce defaultProps declarations alphabetical sorting
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/843d71a432baf0f01f598d7cf1eea75ad6896e4b/docs/rules/jsx-sort-default-props.md
     'react/jsx-sort-default-props': ['off', {
-      ignoreCase: true,
+      ignoreCase: true
     }],
 
     // Prevent React to be incorrectly marked as unused
@@ -234,7 +234,7 @@ module.exports = {
         '/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/',
         'instance-methods',
         'everything-else',
-        'rendering',
+        'rendering'
       ],
       groups: {
         lifecycle: [
@@ -267,8 +267,8 @@ module.exports = {
         rendering: [
           '/^render.+$/',
           'render'
-        ],
-      },
+        ]
+      }
     }],
 
     // Prevent missing parentheses around multilines JSX
@@ -280,7 +280,7 @@ module.exports = {
       arrow: 'parens-new-line',
       condition: 'parens-new-line',
       logical: 'parens-new-line',
-      prop: 'parens-new-line',
+      prop: 'parens-new-line'
     }],
 
     // Require that the first prop in a JSX element be on a new line when the element is multiline
@@ -325,7 +325,7 @@ module.exports = {
 
     // Forbid certain elements
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/forbid-elements.md
-    'react/forbid-elements': ['off', { forbid: [], }],
+    'react/forbid-elements': ['off', { forbid: [] }],
 
     // Prevent problem with children and props.dangerouslySetInnerHTML
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-danger-with-children.md
@@ -336,7 +336,7 @@ module.exports = {
     'react/no-unused-prop-types': ['error', {
       customValidators: [
       ],
-      skipShapeProps: true,
+      skipShapeProps: true
     }],
 
     // Require style prop value be an object or var
@@ -357,7 +357,7 @@ module.exports = {
       closingSlash: 'never',
       beforeSelfClosing: 'always',
       afterOpening: 'never',
-      beforeClosing: 'never',
+      beforeClosing: 'never'
     }],
 
     // Enforce spaces before the closing bracket of self-closing JSX elements
@@ -400,7 +400,7 @@ module.exports = {
     'react/boolean-prop-naming': ['off', {
       propTypeNames: ['bool', 'mutuallyExclusiveTrueProps'],
       rule: '^(is|has)[A-Z]([A-Za-z0-9]?)+',
-      message: '',
+      message: ''
     }],
 
     // Prevents common casing typos
@@ -428,7 +428,7 @@ module.exports = {
     'react/button-has-type': ['error', {
       button: true,
       submit: true,
-      reset: false,
+      reset: false
     }],
 
     // Ensures inline tags are not rendered without spaces between them
@@ -458,7 +458,7 @@ module.exports = {
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-curly-newline.md
     'react/jsx-curly-newline': ['error', {
       multiline: 'consistent',
-      singleline: 'consistent',
+      singleline: 'consistent'
     }],
 
     // Enforce state initialization style
@@ -477,7 +477,7 @@ module.exports = {
       html: 'enforce',
       custom: 'enforce',
       explicitSpread: 'ignore',
-      exceptions: [],
+      exceptions: []
     }],
 
     // Enforce that props are read-only
@@ -489,8 +489,8 @@ module.exports = {
     'react/jsx-no-script-url': ['error', [
       {
         name: 'Link',
-        props: ['to'],
-      },
+        props: ['to']
+      }
     ]],
 
     // Disallow unnecessary fragments
@@ -506,7 +506,7 @@ module.exports = {
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/function-component-definition.md
     'react/function-component-definition': ['error', {
       namedComponents: 'arrow-function',
-      unnamedComponents: 'arrow-function',
+      unnamedComponents: 'arrow-function'
     }],
 
     // Enforce a new line after jsx elements and expressions
