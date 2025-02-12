@@ -18,6 +18,7 @@
     "inspect-config:base": "eslint --inspect-config --config=index.js",
     "inspect-config:jest": "eslint --inspect-config --config=jest/index.js",
     "inspect-config:jsdoc": "eslint --inspect-config --config=jsdoc/index.js",
+    "inspect-config:react": "eslint --inspect-config --config=react/index.js",
     "lint": "eslint --config=index.js --cache --report-unused-disable-directives --report-unused-inline-configs error"
   },
   "peerDependencies": {
@@ -38,6 +39,8 @@
   "devDependencies": {
     "auto-publish-package": "^2.0.0",
     "eslint": "^9.19.0",
-    "eslint-plugin-import": "^2.30.0"
+    "eslint-plugin-import": "^2.30.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.4"
   }
 }
