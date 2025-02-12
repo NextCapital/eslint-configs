@@ -4,6 +4,8 @@ const globals = require('globals');
 const pluginReact = require('eslint-plugin-react');
 const jsxA11y = require('eslint-plugin-jsx-a11y');
 
+const stylisticJsx = require('@stylistic/eslint-plugin-jsx');
+
 const nextcapitalReact = require('./flat/rules');
 
 module.exports = [
@@ -40,7 +42,8 @@ module.exports = [
     ],
     plugins: {
       'jsx-a11y': jsxA11y,
-      react: pluginReact
+      react: pluginReact,
+      '@stylistic/jsx': stylisticJsx
     }
   },
   {
@@ -49,6 +52,14 @@ module.exports = [
     ...pluginReact.configs.flat['jsx-runtime'] // Add this if you are using React 17+
   },
   jsxA11y.flatConfigs.recommended,
+  {
+    name: '@stylistic - Disable all legacy rules',
+    ...stylisticJsx.configs['disable-legacy']
+  },
+  {
+    name: '@stylistic - Enable all JSX rules',
+    ...stylisticJsx.configs['all-flat'],
+  },
   ...nextcapitalReact,
   {
     files: [
