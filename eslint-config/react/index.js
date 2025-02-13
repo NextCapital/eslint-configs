@@ -58,7 +58,7 @@ module.exports = [
   },
   {
     name: '@stylistic - Enable all JSX rules',
-    ...stylisticJsx.configs['all-flat'],
+    ...stylisticJsx.configs['all-flat']
   },
   ...nextcapitalReact,
   {
