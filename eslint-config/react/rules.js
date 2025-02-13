@@ -145,7 +145,7 @@ module.exports = {
     'react/forbid-prop-types': ['error', {
       checkChildContextTypes: true,
       checkContextTypes: true,
-      forbid: ['any', 'array', 'object'],
+      forbid: ['any', 'array', 'object']
     }],
 
     // TODO: semver-major, enable
@@ -193,7 +193,7 @@ module.exports = {
       allowBind: false,
       allowFunctions: false,
       ignoreDOMComponents: true,
-      ignoreRefs: true,
+      ignoreRefs: true
     }],
 
     // prevent accidental JS comments from being injected into JSX as text
@@ -237,7 +237,7 @@ module.exports = {
       custom: 'enforce',
       exceptions: [],
       explicitSpread: 'ignore',
-      html: 'enforce',
+      html: 'enforce'
     }],
 
     // Deprecated in favor of react/jsx-sort-props
