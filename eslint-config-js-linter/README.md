@@ -1,3 +1,6 @@
+> [!CAUTION]
+> This package is deprecated. Please use @nextcapital/eslint-config
+
 # eslint-config-js-linter
 
 An eslint config to enforce Nextcapital's Javscript code conventions. Uses `airbnb-base` as a base (`airbnb-base` does not include React/JSX conventions, whereas `airbnb` does).

@@ -1,3 +1,6 @@
+> [!CAUTION]
+> This package is deprecated. Please use @nextcapital/eslint-config
+
 # eslint-config-jsdoc-linter
 
 An eslint config to enforce Nextcapital's JSDoc conventions.

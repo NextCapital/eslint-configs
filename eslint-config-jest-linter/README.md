@@ -1,3 +1,6 @@
+> [!CAUTION]
+> This package is deprecated. Please use @nextcapital/eslint-config
+
 # eslint-config-jest-linter
 
 An eslint config to enforce Nextcapital's jest conventions.
