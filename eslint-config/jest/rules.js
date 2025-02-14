@@ -5,6 +5,7 @@ module.exports = {
       withinDescribe: 'test'
 
     }],
+
     'jest/no-hooks': 'off',
     'jest/no-large-snapshots': ['error', { maxSize: 100 }],
 
