@@ -18,18 +18,16 @@ module.exports = {
     'no-restricted-globals': [
       'error',
       {
-        name: 'isFinite',
-        message:
-          'Use Number.isFinite instead https://github.com/airbnb/javascript#standard-library--isfinite'
+        message: 'Use Number.isFinite instead https://github.com/airbnb/javascript#standard-library--isfinite',
+        name: 'isFinite'
       },
       {
-        name: 'isNaN',
-        message:
-          'Use Number.isNaN instead https://github.com/airbnb/javascript#standard-library--isnan'
+        message: 'Use Number.isNaN instead https://github.com/airbnb/javascript#standard-library--isnan',
+        name: 'isNaN'
       }
     ].concat(confusingBrowserGlobals.map((g) => ({
-      name: g,
-      message: `Use window.${g} instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md`
+      message: `Use window.${g} instead. https://github.com/facebook/create-react-app/blob/HEAD/packages/confusing-browser-globals/README.md`,
+      name: g
     }))),
 
     // disallow declaration of variables already declared in the outer scope
@@ -49,9 +47,17 @@ module.exports = {
     'no-undefined': 'off',
 
     // disallow declaration of variables that are not used in the code
-    'no-unused-vars': ['error', { vars: 'all', args: 'after-used', ignoreRestSiblings: true }],
+    'no-unused-vars': ['error', {
+      args: 'after-used',
+      ignoreRestSiblings: true,
+      vars: 'all'
+    }],
 
     // disallow use of variables before they are defined
-    'no-use-before-define': ['error', { functions: true, classes: true, variables: true }]
+    'no-use-before-define': ['error', {
+      classes: true,
+      functions: true,
+      variables: true
+    }]
   }
 };

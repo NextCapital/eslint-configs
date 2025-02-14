@@ -1,41 +1,56 @@
 module.exports = {
   languageOptions: {
     parserOptions: {
-      ecmaVersion: 2016,
-      sourceType: 'module',
       ecmaFeatures: {
         generators: false,
         objectLiteralDuplicateProperties: false
-      }
+      },
+      ecmaVersion: 2016,
+      sourceType: 'module'
     }
   },
 
   rules: {
+    // require parens in arrow function arguments
+    '@stylistic/arrow-parens': ['error', 'always'],
+
+    // require space before/after arrow function's arrow
+    '@stylistic/arrow-spacing': ['error', {
+      after: true,
+      before: true
+    }],
+
+    // enforce the spacing around the * in generator functions
+    '@stylistic/generator-star-spacing': ['error', {
+      after: true,
+      before: false
+    }],
+
+    // disallow arrow functions where they could be confused with comparisons
+    '@stylistic/no-confusing-arrow': ['error', {
+      allowParens: true
+    }],
+
+    // enforce spacing between object rest-spread
+    '@stylistic/rest-spread-spacing': ['error', 'never'],
+
+    // enforce usage of spacing in template strings
+    '@stylistic/template-curly-spacing': 'error',
+
+    // enforce spacing around the * in yield* expressions
+    '@stylistic/yield-star-spacing': ['error', 'after'],
+
     // enforces no braces where they can be omitted
     // TODO: enable requireReturnForObjectLiteral?
     'arrow-body-style': ['error', 'as-needed', {
       requireReturnForObjectLiteral: false
     }],
 
-    // require parens in arrow function arguments
-    '@stylistic/arrow-parens': ['error', 'always'],
-
-    // require space before/after arrow function's arrow
-    '@stylistic/arrow-spacing': ['error', { before: true, after: true }],
-
     // verify super() callings in constructors
     'constructor-super': 'error',
 
-    // enforce the spacing around the * in generator functions
-    '@stylistic/generator-star-spacing': ['error', { before: false, after: true }],
-
     // disallow modifying variables of class declarations
     'no-class-assign': 'error',
-
-    // disallow arrow functions where they could be confused with comparisons
-    '@stylistic/no-confusing-arrow': ['error', {
-      allowParens: true
-    }],
 
     // disallow modifying variables that are declared using const
     'no-const-assign': 'error',
@@ -75,8 +90,8 @@ module.exports = {
     // disallow renaming import, export, and destructured assignments to the same name
     'no-useless-rename': ['error', {
       ignoreDestructuring: false,
-      ignoreImport: false,
-      ignoreExport: false
+      ignoreExport: false,
+      ignoreImport: false
     }],
 
     // require let or const instead of var
@@ -84,8 +99,8 @@ module.exports = {
 
     // require method and property shorthand syntax for object literals
     'object-shorthand': ['error', 'always', {
-      ignoreConstructors: false,
-      avoidQuotes: true
+      avoidQuotes: true,
+      ignoreConstructors: false
     }],
 
     // suggest using arrow functions as callbacks
@@ -121,9 +136,6 @@ module.exports = {
     // disallow generator functions that do not have yield
     'require-yield': 'error',
 
-    // enforce spacing between object rest-spread
-    '@stylistic/rest-spread-spacing': ['error', 'never'],
-
     // import sorting
     'sort-imports': ['off', {
       ignoreCase: false,
@@ -133,12 +145,6 @@ module.exports = {
     }],
 
     // require a Symbol description
-    'symbol-description': 'error',
-
-    // enforce usage of spacing in template strings
-    '@stylistic/template-curly-spacing': 'error',
-
-    // enforce spacing around the * in yield* expressions
-    '@stylistic/yield-star-spacing': ['error', 'after']
+    'symbol-description': 'error'
   }
 };

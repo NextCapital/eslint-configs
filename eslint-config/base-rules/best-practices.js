@@ -1,5 +1,19 @@
 module.exports = {
   rules: {
+    // enforces consistent newlines before or after dots
+    '@stylistic/dot-location': ['error', 'property'],
+
+    // disallow the use of leading or trailing decimal points in numeric literals
+    '@stylistic/no-floating-decimal': 'error',
+
+    // disallow use of multiple spaces
+    '@stylistic/no-multi-spaces': ['error', {
+      ignoreEOLComments: false
+    }],
+
+    // require immediate function invocation to be wrapped in parentheses
+    '@stylistic/wrap-iife': ['error', 'outside', { functionPrototypeMethods: false }],
+
     // enforces getter/setter pairs in objects
     'accessor-pairs': 'off',
 
@@ -9,11 +23,11 @@ module.exports = {
     // treat var statements as if they were block scoped
     'block-scoped-var': 'error',
 
-    // specify the maximum cyclomatic complexity allowed in a program
-    complexity: ['off', 20],
-
     // enforce that class methods use "this"
     'class-methods-use-this': 'off',
+
+    // specify the maximum cyclomatic complexity allowed in a program
+    complexity: ['off', 20],
 
     // require return statements to either always or never specify values
     'consistent-return': 'off',
@@ -31,9 +45,6 @@ module.exports = {
 
     // encourages use of dot notation whenever possible
     'dot-notation': ['error', { allowKeywords: true }],
-
-    // enforces consistent newlines before or after dots
-    '@stylistic/dot-location': ['error', 'property'],
 
     // require the use of === and !==
     eqeqeq: ['error', 'always', { null: 'ignore' }],
@@ -100,21 +111,15 @@ module.exports = {
     // disallow fallthrough of case statements
     'no-fallthrough': 'error',
 
-    // disallow the use of leading or trailing decimal points in numeric literals
-    '@stylistic/no-floating-decimal': 'error',
-
     // disallow reassignments of native objects or read-only globals
     'no-global-assign': ['error', { exceptions: [] }],
 
-    // deprecated in favor of no-global-assign
-    'no-native-reassign': 'off',
-
     // disallow implicit type conversions
     'no-implicit-coercion': ['off', {
+      allow: [],
       boolean: false,
       number: true,
-      string: true,
-      allow: []
+      string: true
     }],
 
     // disallow var and named functions in global scope
@@ -130,7 +135,10 @@ module.exports = {
     'no-iterator': 'error',
 
     // disallow use of labels for anything other than loops and switches
-    'no-labels': ['error', { allowLoop: false, allowSwitch: false }],
+    'no-labels': ['error', {
+      allowLoop: false,
+      allowSwitch: false
+    }],
 
     // disallow unnecessary nested blocks
     'no-lone-blocks': 'error',
@@ -140,19 +148,17 @@ module.exports = {
 
     // disallow magic numbers
     'no-magic-numbers': ['off', {
-      ignore: [],
-      ignoreArrayIndexes: true,
+      detectObjects: false,
       enforceConst: true,
-      detectObjects: false
-    }],
-
-    // disallow use of multiple spaces
-    '@stylistic/no-multi-spaces': ['error', {
-      ignoreEOLComments: false
+      ignore: [],
+      ignoreArrayIndexes: true
     }],
 
     // disallow use of multiline strings
     'no-multi-str': 'error',
+
+    // deprecated in favor of no-global-assign
+    'no-native-reassign': 'off',
 
     // disallow use of new operator when not part of the assignment or comparison
     'no-new': 'error',
@@ -180,7 +186,6 @@ module.exports = {
     // disallow reassignment of function parameters
     // disallow parameter object manipulation except for specific exclusions
     'no-param-reassign': ['error', {
-      props: true,
       ignorePropertyModificationsFor: [
         'acc', // for reduce accumulators
         'accumulator', // for reduce accumulators
@@ -193,7 +198,8 @@ module.exports = {
         'response', // for Express responses
         '$scope', // for Angular 1 scopes
         'staticContext' // for ReactRouter context
-      ]
+      ],
+      props: true
     }],
 
     // disallow usage of __proto__ property
@@ -204,43 +210,43 @@ module.exports = {
 
     // disallow certain object properties
     'no-restricted-properties': ['error', {
+      message: 'arguments.callee is deprecated',
       object: 'arguments',
-      property: 'callee',
-      message: 'arguments.callee is deprecated'
+      property: 'callee'
     }, {
+      message: 'Please use Number.isFinite instead',
       object: 'global',
-      property: 'isFinite',
-      message: 'Please use Number.isFinite instead'
+      property: 'isFinite'
     }, {
+      message: 'Please use Number.isFinite instead',
       object: 'self',
-      property: 'isFinite',
-      message: 'Please use Number.isFinite instead'
+      property: 'isFinite'
     }, {
+      message: 'Please use Number.isFinite instead',
       object: 'window',
-      property: 'isFinite',
-      message: 'Please use Number.isFinite instead'
+      property: 'isFinite'
     }, {
+      message: 'Please use Number.isNaN instead',
       object: 'global',
-      property: 'isNaN',
-      message: 'Please use Number.isNaN instead'
+      property: 'isNaN'
     }, {
+      message: 'Please use Number.isNaN instead',
       object: 'self',
-      property: 'isNaN',
-      message: 'Please use Number.isNaN instead'
+      property: 'isNaN'
     }, {
+      message: 'Please use Number.isNaN instead',
       object: 'window',
-      property: 'isNaN',
-      message: 'Please use Number.isNaN instead'
+      property: 'isNaN'
     }, {
-      property: '__defineGetter__',
-      message: 'Please use Object.defineProperty instead.'
+      message: 'Please use Object.defineProperty instead.',
+      property: '__defineGetter__'
     }, {
-      property: '__defineSetter__',
-      message: 'Please use Object.defineProperty instead.'
+      message: 'Please use Object.defineProperty instead.',
+      property: '__defineSetter__'
     }, {
+      message: 'Use the exponentiation operator (**) instead.',
       object: 'Math',
-      property: 'pow',
-      message: 'Use the exponentiation operator (**) instead.'
+      property: 'pow'
     }],
 
     // disallow use of assignment in return statement
@@ -269,8 +275,8 @@ module.exports = {
     // disallow usage of expressions in statement position
     'no-unused-expressions': ['error', {
       allowShortCircuit: false,
-      allowTernary: false,
-      allowTaggedTemplates: false
+      allowTaggedTemplates: false,
+      allowTernary: false
     }],
 
     // disallow unused labels
@@ -295,13 +301,13 @@ module.exports = {
     'no-void': 'error',
 
     // disallow usage of configurable warning terms in comments: e.g. todo
-    'no-warning-comments': ['off', { terms: ['todo', 'fixme', 'xxx'], location: 'start' }],
+    'no-warning-comments': ['off', {
+      location: 'start',
+      terms: ['todo', 'fixme', 'xxx']
+    }],
 
     // disallow use of the with statement
     'no-with': 'error',
-
-    // require using Error objects as Promise rejection reasons
-    'prefer-promise-reject-errors': ['error', { allowEmptyReject: true }],
 
     // Suggest using named capture group in regular expression
     'prefer-named-capture-group': 'off',
@@ -309,6 +315,9 @@ module.exports = {
     // Prefer Object.hasOwn() over Object.prototype.hasOwnProperty.call()
     // TODO: semver-major: enable thus rule, once eslint v8.5.0 is required
     'prefer-object-has-own': 'off',
+
+    // require using Error objects as Promise rejection reasons
+    'prefer-promise-reject-errors': ['error', { allowEmptyReject: true }],
 
     'prefer-regex-literals': ['error', {
       disallowRedundantWrapping: true
@@ -325,9 +334,6 @@ module.exports = {
 
     // requires to declare all vars on top of their containing scope
     'vars-on-top': 'error',
-
-    // require immediate function invocation to be wrapped in parentheses
-    '@stylistic/wrap-iife': ['error', 'outside', { functionPrototypeMethods: false }],
 
     // require or disallow Yoda conditions
     yoda: 'error'

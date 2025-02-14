@@ -1,5 +1,17 @@
 module.exports = {
   rules: {
+    // disallow unnecessary parentheses
+    '@stylistic/no-extra-parens': ['off', 'all', {
+      conditionalAssign: true,
+      enforceForArrowConditionals: false,
+      ignoreJSX: 'all', // delegate to eslint-plugin-react
+      nestedBinaryExpressions: false,
+      returnAssign: false
+    }],
+
+    // disallow unnecessary semicolons
+    '@stylistic/no-extra-semi': 'error',
+
     // Enforce “for” loop update clause moving the counter in the right direction
     'for-direction': 'error',
 
@@ -58,18 +70,6 @@ module.exports = {
     // disallow double-negation boolean casts in a boolean context
     'no-extra-boolean-cast': 'error',
 
-    // disallow unnecessary parentheses
-    '@stylistic/no-extra-parens': ['off', 'all', {
-      conditionalAssign: true,
-      nestedBinaryExpressions: false,
-      returnAssign: false,
-      ignoreJSX: 'all', // delegate to eslint-plugin-react
-      enforceForArrowConditionals: false
-    }],
-
-    // disallow unnecessary semicolons
-    '@stylistic/no-extra-semi': 'error',
-
     // disallow overwriting functions written as function declarations
     'no-func-assign': 'error',
 
@@ -90,12 +90,16 @@ module.exports = {
     // Disallow characters which are made with multiple code points in character class syntax
     'no-misleading-character-class': 'error',
 
-    // disallow the use of object properties of the global object (Math and JSON) as functions
-    'no-obj-calls': 'error',
+    // disallow negation of the left operand of an in expression
+    // deprecated in favor of no-unsafe-negation
+    'no-negated-in-lhs': 'off',
 
     // Disallow new operators with global non-constructor functions
     // TODO: semver-major, enable
     'no-new-native-nonconstructor': 'off',
+
+    // disallow the use of object properties of the global object (Math and JSON) as functions
+    'no-obj-calls': 'error',
 
     // Disallow returning values from Promise executor functions
     'no-promise-executor-return': 'error',
@@ -141,10 +145,6 @@ module.exports = {
 
     // Disallow useless backreferences in regular expressions
     'no-useless-backreference': 'error',
-
-    // disallow negation of the left operand of an in expression
-    // deprecated in favor of no-unsafe-negation
-    'no-negated-in-lhs': 'off',
 
     // Disallow assignments that can lead to race conditions due to usage of await or yield
     // note: not enabled because it is very buggy
