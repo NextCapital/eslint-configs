@@ -18,7 +18,8 @@
     "inspect-config:base": "eslint --inspect-config --config=index.js",
     "inspect-config:jest": "eslint --inspect-config --config=jest/index.js",
     "inspect-config:jsdoc": "eslint --inspect-config --config=jsdoc/index.js",
-    "lint": "eslint --config=index.js --cache --report-unused-disable-directives --report-unused-inline-configs error"
+    "inspect-config:react": "eslint --inspect-config --config=react/index.js",
+    "lint": "eslint --config=internal.js --cache"
   },
   "peerDependencies": {
     "eslint": ">= 9",
@@ -29,10 +30,13 @@
     "@babel/eslint-parser": "^7.26.5",
     "@eslint/js": "^9.19.0",
     "@stylistic/eslint-plugin": "^3.0.1",
+    "@stylistic/eslint-plugin-jsx": "^3.1.0",
     "confusing-browser-globals": "^1.0.11",
     "eslint-plugin-jest": "^28.11.0",
     "eslint-plugin-jsdoc": "^50.6.3",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-n": "^17.15.1",
+    "eslint-plugin-react": "^7.37.4",
     "globals": "^15.14.0"
   },
   "devDependencies": {

@@ -16,6 +16,10 @@ module.exports = [
         requireConfigFile: false
       }
     },
+    linterOptions: {
+      reportUnusedDisableDirectives: 'error',
+      reportUnusedInlineConfigs: 'error'
+    },
     files: [
       '**/*.{js,mjs,cjs,jsx}'
     ],
