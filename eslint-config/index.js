@@ -33,7 +33,7 @@ module.exports = [
     plugins: {
       n: nodePlugin
     },
-    rules: js.configs.all.rules
+    rules: js.configs.recommended.rules
   },
   {
     name: '@stylistic - Disable all legacy rules',
@@ -41,7 +41,7 @@ module.exports = [
   },
   {
     name: '@stylistic - Enable all style rules',
-    ...stylistic.configs['all-flat']
+    ...stylistic.configs['recommended-flat']
   },
   ...([
     './base-rules/flat/best-practices',
