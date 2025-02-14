@@ -28,7 +28,23 @@ jobs:
           git update-index --assume-unchanged ./eslint-config-js-linter/.npmrc
           git update-index --assume-unchanged ./eslint-config-jsdoc-linter/.npmrc
           git update-index --assume-unchanged ./eslint-config-react-linter/.npmrc
-      - name: Publish with Lerna
-        run: npx lerna publish from-package --yes
+      - name: Publish eslint-config-js-linter
+        working-directory: ./eslint-config-js-linter
+        run: npm publish
+        env:
+          token: ${{ secrets.NPM_TOKEN }}
+      - name: Publish eslint-config-jest-linter
+        working-directory: ./eslint-config-jest-linter
+        run: npm publish
+        env:
+          token: ${{ secrets.NPM_TOKEN }}
+      - name: Publish eslint-config-jsdoc-linter
+        working-directory: ./eslint-config-jsdoc-linter
+        run: npm publish
+        env:
+          token: ${{ secrets.NPM_TOKEN }}
+      - name: Publish eslint-config-react-linter
+        working-directory: ./eslint-config-react-linter
+        run: npm publish
         env:
           token: ${{ secrets.NPM_TOKEN }}
