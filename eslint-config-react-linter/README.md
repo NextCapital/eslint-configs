@@ -1,3 +1,6 @@
+> [!CAUTION]
+> This package is deprecated. Please use @nextcapital/eslint-config
+
 # eslint-config-react-linter
 
 An eslint config to enforce Nextcapital's React and JSX conventions. Uses `airbnb` as a base.
