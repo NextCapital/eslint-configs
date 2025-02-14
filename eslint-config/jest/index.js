@@ -37,7 +37,7 @@ module.exports = [
   },
   {
     name: 'jest - Enable all rules',
-    ...pluginJest.configs['flat/all']
+    ...pluginJest.configs['flat/recommended']
   },
   ...nextcapitalJest
 ];
