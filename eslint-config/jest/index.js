@@ -22,7 +22,7 @@ module.exports = [
       reportUnusedInlineConfigs: 'error'
     },
     files: [
-      '**/*.{spec,test}.{js,ts,mjs,cjs,jsx,tsx}'
+      '**/*.{spec,test}.{js,mjs,cjs,jsx}'
     ],
     ignores: [
       '.git/',
