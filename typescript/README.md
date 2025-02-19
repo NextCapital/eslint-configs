@@ -1,4 +1,4 @@
-# @nextcapital/eslint-config
+# @nextcapital/eslint-config-typescript
 
 [![NextCapital Open Source](https://img.shields.io/badge/NextCapital-Open%20Source-%2300a5f6?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAA/FBMVEUApfYAAAAApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYk6uC4AAAAU3RSTlMAAJHwVI7ULQcDHcG4FyyxdAE13JQInQLv+G4Kl9AoePvqRynk6UYLnNNrZxrCsxLDsBPPK3Np5UAu51X0YpnSKjbd/oQFGboepg+0cZPEIATmP31l8v0AAAC1SURBVBgZBcGHIsMAFEDReykVWgRtanYYCVp71ay95/v/f3EOMDRcAlVVgZEYLYPCWILA+ERUqgiTU9MpCDOzMVeDaiXqGSiUGvMLLC7F8gqgkjVb7c7q2voGiCp5EZvlre0URRW6vdjZTVBRhe5e7B8kqKiSF3F4dHySoqgkzdbpWf+83QFRuGhcXpFfx80AEG7v7h8e4ek5igzgpRevbwj99w+A7DO+vkGh9oOQ1X//QFXVf8KAFHYrlyAPAAAAAElFTkSuQmCC)](https://www.nextcapital.com)
 
@@ -9,20 +9,20 @@ A series of ESLint configs to enforce Nextcapial's code standards.
 ## Installation
 
 ```bash
-npx install-peerdeps --dev @nextcapital/eslint-config
+npx install-peerdeps --dev @nextcapital/eslint-config-typescript
 ```
 
 ## Usage
 
 We export multiple ESLint configurations for your usage.
 
-### Base Config (@nextcapital/eslint-config)
+### Base Config (@nextcapital/eslint-config-typescript)
 
-This config contains all rules for base JavaScript development - no jest, jsdoc, react, typescript, etc.
+This config contains all rules for base TypeScript development - no jest, jsdoc, react, etc. This config extends the base JavaScript config.
 
 ```js
 // eslint.config.cjs
-const nextcapitalBase = require('@nextcapital/eslint-config');
+const nextcapitalBase = require('@nextcapital/eslint-config-typescript');
 
 module.exports = [
   ...nextcapitalBase,
@@ -32,7 +32,7 @@ module.exports = [
 
 ```js
 // eslint.config.mjs
-import nextcapitalBase from '@nextcapital/eslint-config';
+import nextcapitalBase from '@nextcapital/eslint-config-typescript';
 
 export default [
   ...nextcapitalBase,
@@ -42,11 +42,11 @@ export default [
 
 ### Jest
 
-This config contains all rules for testing with jest. This config does not extend the base config and can be used as a standalone ruleset.
+This config contains all rules for testing with jest and TypeScript. This config does not extend the base config and can be used as a standalone ruleset.
 
 ```js
 // eslint.config.cjs
-const jestConfig = require('@nextcapital/eslint-config/jest');
+const jestConfig = require('@nextcapital/eslint-config-typescript/jest');
 
 module.exports = [
   ...jestConfig,
@@ -56,7 +56,7 @@ module.exports = [
 
 ```js
 // eslint.config.mjs
-import jestConfig from '@nextcapital/eslint-config/jest';
+import jestConfig from '@nextcapital/eslint-config-typescript/jest';
 
 export default [
   ...jestConfig,
@@ -66,11 +66,11 @@ export default [
 
 ### JSDoc
 
-This config contains all rules for testing with JSDoc. This config does not extend the base config and can be used as a standalone ruleset.
+This config contains all rules for testing with jsdoc and TypeScript. This config does not extend the base config and can be used as a standalone ruleset.
 
 ```js
 // eslint.config.cjs
-const jsdocConfig = require('@nextcapital/eslint-config/jsdoc');
+const jsdocConfig = require('@nextcapital/eslint-config-typescript/jsdoc');
 
 module.exports = [
   ...jsdocConfig,
@@ -80,7 +80,7 @@ module.exports = [
 
 ```js
 // eslint.config.mjs
-import jsdocConfig from '@nextcapital/eslint-config/jsdoc';
+import jsdocConfig from '@nextcapital/eslint-config-typescript/jsdoc';
 
 export default [
   ...jsdocConfig,
@@ -90,11 +90,11 @@ export default [
 
 ### React
 
-This config contains all rules for developing with React/jsx. This config does not extend the base config and can be used as a standalone ruleset.
+This config contains all rules for developing with React/jsx and TypeScript. This config does not extend the base config and can be used as a standalone ruleset.
 
 ```js
 // eslint.config.cjs
-const reactConfig = require('@nextcapital/eslint-config/react');
+const reactConfig = require('@nextcapital/eslint-config-typescript/react');
 
 module.exports = [
   ...reactConfig,
@@ -104,17 +104,13 @@ module.exports = [
 
 ```js
 // eslint.config.mjs
-import reactConfig from '@nextcapital/eslint-config/react';
+import reactConfig from '@nextcapital/eslint-config-typescript/react';
 
 export default [
   ...reactConfig,
   // ......
 ];
 ```
-
-### TypeScript
-
-See `@nextcapital/eslint-config-typescript`.
 
 ## Contributing
 

@@ -1,0 +1,49 @@
+{
+  "name": "@nextcapital/eslint-config-typescript",
+  "version": "0.1.0",
+  "description": "ESLint config to enforce our styleguide",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./jest": "./jest/index.js"
+  },
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">= 18",
+    "npm": ">= 10"
+  },
+  "scripts": {
+    "autopublish": "auto-publish-package",
+    "ci:local": "npm run lint",
+    "inspect-config:base": "eslint --inspect-config --config=index.js",
+    "inspect-config:jest": "eslint --inspect-config --config=jest/index.js",
+    "inspect-config:jsdoc": "eslint --inspect-config --config=jsdoc/index.js",
+    "inspect-config:react": "eslint --inspect-config --config=react/index.js",
+    "lint": "eslint --config=internal.js --cache"
+  },
+  "peerDependencies": {
+    "eslint": ">= 9",
+    "eslint-plugin-import": "^2.30.0",
+    "typescript": ">= 4"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.19.0",
+    "@stylistic/eslint-plugin": "^3.0.1",
+    "@stylistic/eslint-plugin-jsx": "^3.1.0",
+    "@typescript-eslint/parser": "^8.24.1",
+    "confusing-browser-globals": "^1.0.11",
+    "eslint-plugin-jest": "^28.11.0",
+    "eslint-plugin-jsdoc": "^50.6.3",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-n": "^17.15.1",
+    "eslint-plugin-react": "^7.37.4",
+    "globals": "^15.14.0",
+    "typescript-eslint": "^8.24.1"
+  },
+  "devDependencies": {
+    "auto-publish-package": "^2.0.0",
+    "eslint": "^9.19.0",
+    "eslint-plugin-import": "^2.30.0",
+    "typescript": "^5.7.3"
+  }
+}
