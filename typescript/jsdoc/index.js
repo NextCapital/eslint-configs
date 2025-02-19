@@ -1,6 +1,6 @@
 const tsParser = require('@typescript-eslint/parser');
 
-const jsJSDocConfig = require('../../eslint-config/jsdoc/index');
+const jsJSDocConfig = require('../../javascript/jsdoc/index');
 
 module.exports = [
   ...jsJSDocConfig,

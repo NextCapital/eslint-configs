@@ -5,13 +5,27 @@
   "main": "index.js",
   "exports": {
     ".": "./index.js",
-    "./jest": "./jest/index.js"
+    "./jest": "./jest/index.js",
+    "./jsdoc": "./jsdoc/index.js",
+    "./react": "./react/index.js"
   },
   "license": "Apache-2.0",
   "engines": {
     "node": ">= 18",
     "npm": ">= 10"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nextcapital/eslint-config.git"
+  },
+  "author": {
+    "name": "NextCapital Group",
+    "url": "https://nextcapital.com"
+  },
+  "bugs": {
+    "url": "https://github.com/nextcapital/eslint-config/issues"
+  },
+  "homepage": "https://github.com/nextcapital/eslint-config#readme",
   "scripts": {
     "autopublish": "auto-publish-package",
     "ci:local": "npm run lint",
