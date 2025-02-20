@@ -7,7 +7,10 @@
     ".": "./index.js",
     "./jest": "./jest/index.js",
     "./jsdoc": "./jsdoc/index.js",
-    "./react": "./react/index.js"
+    "./react": "./react/index.js",
+
+    "./base-rules/*": "./base-rules/*.js",
+    "./base-rules/*.js": "./base-rules/*.js"
   },
   "license": "Apache-2.0",
   "engines": {
