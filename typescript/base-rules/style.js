@@ -1,7 +1,7 @@
 module.exports = [{
   name: '@nextcapital/eslint-config-typescript/style',
   rules: {
-    '@stylistic/member-delimiter-style': {
+    '@stylistic/member-delimiter-style': ['error', {
       multiline: {
         delimiter: 'semi',
         requireLast: true
@@ -11,6 +11,6 @@ module.exports = [{
         delimiter: 'semi',
         requireLast: true
       }
-    }
+    }]
   }
 }];
