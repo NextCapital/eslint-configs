@@ -24,7 +24,9 @@ jobs:
         working-directory: ${{ matrix.cwd }}
       - run: |
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ./.npmrc
+          cp ../LICENSE.txt ./LICENSE.txt
           git update-index --assume-unchanged ./.npmrc
+          git update-index --assume-unchanged ./LICENSE.txt
           npm publish --access public
         working-directory: ${{ matrix.cwd }}
         env:
