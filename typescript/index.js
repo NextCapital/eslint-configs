@@ -46,14 +46,14 @@ module.exports = [
     ...stylistic.configs['recommended-flat']
   },
   ...([
-    '../eslint-config/base-rules/flat/best-practices',
-    '../eslint-config/base-rules/flat/errors',
-    '../eslint-config/base-rules/flat/node',
-    '../eslint-config/base-rules/flat/style',
-    '../eslint-config/base-rules/flat/variables',
-    '../eslint-config/base-rules/flat/es6',
-    '../eslint-config/base-rules/flat/imports',
-    '../eslint-config/base-rules/flat/strict'
+    '@nextcapital/eslint-config/base-rules/flat/best-practices',
+    '@nextcapital/eslint-config/base-rules/flat/errors',
+    '@nextcapital/eslint-config/base-rules/flat/node',
+    '@nextcapital/eslint-config/base-rules/flat/style',
+    '@nextcapital/eslint-config/base-rules/flat/variables',
+    '@nextcapital/eslint-config/base-rules/flat/es6',
+    '@nextcapital/eslint-config/base-rules/flat/imports',
+    '@nextcapital/eslint-config/base-rules/flat/strict'
   ].reduce(
     // eslint-disable-next-line import/no-dynamic-require,n/global-require
     (p, c) => p.concat(require(c)),

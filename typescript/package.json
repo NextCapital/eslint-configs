@@ -5,13 +5,27 @@
   "main": "index.js",
   "exports": {
     ".": "./index.js",
-    "./jest": "./jest/index.js"
+    "./jest": "./jest/index.js",
+    "./jsdoc": "./jsdoc/index.js",
+    "./react": "./react/index.js"
   },
   "license": "Apache-2.0",
   "engines": {
     "node": ">= 18",
     "npm": ">= 10"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nextcapital/eslint-config.git"
+  },
+  "author": {
+    "name": "NextCapital Group",
+    "url": "https://nextcapital.com"
+  },
+  "bugs": {
+    "url": "https://github.com/nextcapital/eslint-config/issues"
+  },
+  "homepage": "https://github.com/nextcapital/eslint-config#readme",
   "scripts": {
     "autopublish": "auto-publish-package",
     "ci:local": "npm run lint",
@@ -19,7 +33,7 @@
     "inspect-config:jest": "eslint --inspect-config --config=jest/index.js",
     "inspect-config:jsdoc": "eslint --inspect-config --config=jsdoc/index.js",
     "inspect-config:react": "eslint --inspect-config --config=react/index.js",
-    "lint": "eslint --config=internal.js --cache"
+    "lint": "eslint --config=../javascript/internal.js --cache"
   },
   "peerDependencies": {
     "eslint": ">= 9",
@@ -27,6 +41,7 @@
     "typescript": ">= 4"
   },
   "dependencies": {
+    "@nextcapital/eslint-config": "^0.1.0",
     "@eslint/js": "^9.19.0",
     "@stylistic/eslint-plugin": "^3.0.1",
     "@stylistic/eslint-plugin-jsx": "^3.1.0",
@@ -41,6 +56,8 @@
     "typescript-eslint": "^8.24.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.26.7",
+    "@babel/eslint-parser": "^7.26.5",
     "auto-publish-package": "^2.0.0",
     "eslint": "^9.19.0",
     "eslint-plugin-import": "^2.30.0",

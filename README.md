@@ -4,54 +4,64 @@
 
 [![Node Version](https://img.shields.io/badge/node--lts-%3E%3D%2016.13.0-brightgreen)](https://nodejs.org/) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
 
-A series of ESLint configs to enforce Nextcapial's code standards. Each config is independent of the others, allowing for mixing and matching of configs to suit various use cases.
+A series of ESLint configs to enforce Nextcapial's code standards.
 
-Configs can be stacked on top of each other:
-```json
-{
-  "extends": [
-    "@nextcapital/eslint-config-js-linter",
-    "@nextcapital/eslint-config-jest-linter",
-    "@nextcapital/eslint-config-jsdoc-linter"
-  ]
-}
-```
 
 ## Current configs
-* `eslint-config-js-linter` - Enforces basic Javascript standards.
-* `eslint-config-react-linter` - Enforces React and JSX standards.
-* `eslint-config-jest-linter` - Enforces jest testing library standards.
-* `eslint-config-jsdoc-linter` - Enforces JSDoc documentation standards.
+There are two configs - one for JavaScript development and one for TypeScript. The JavaScript rules are included as the base for the TypeScript config.
 
-## Working with Lerna
+Each config includes optional configs for development with jest, jsdoc, and react.
 
-This repository uses [lerna](https://lerna.js.org/docs/introduction) to manage multiple packages from the project root.
+## Installation
 
-### Installing
+```bash
+npx install-peerdeps --dev @nextcapital/eslint-config
+```
 
-`npx lerna bootstrap`
+or
 
-If you have not installed Lerna at the project root, you may need to run `npm install`. 
+```bash
+npx install-peerdeps --dev @nextcapital/eslint-config-typescript
+```
 
-### Versioning
+## Usage
 
-`npx lerna version <major|minor|patch>`
+```js
+// eslint.config.cjs
+const nextcapitalBase = require('@nextcapital/eslint-config');
+const nextcapitalJest = require('@nextcapital/eslint-config/jest');
+const nextcapitalJSDoc = require('@nextcapital/eslint-config/jsdoc');
+const nextcapitalReact = require('@nextcapital/eslint-config/react');
 
-Omit the semver bump to version each package one by one through a series of prompts - useful when packages need different version bumps.
+module.exports = [
+  ...nextcapitalBase,
+  ...nextcapitalJest,
+  ...nextcapitalJSDoc,
+  ...nextcapitalReact,
+  // ......
+];
+```
 
-**NOTE:** This will version ALL packages in one go.
+```js
+// eslint.config.mjs
+import nextcapitalBase from '@nextcapital/eslint-config';
+import nextcapitalJest from '@nextcapital/eslint-config/jest';
+import nextcapitalJSDoc from '@nextcapital/eslint-config/jsdoc';
+import nextcapitalReact from '@nextcapital/eslint-config/react';
 
-### Publishing
-
-**IMPORTANT:** Versioning is handled by GitHub Actions through the `publish.yml` workflow configuration. DO NOT ATTEMPT TO PUBLISH PACKAGES YOURSELF. Publishing yourself should fail anyways because you need the auth token for an npm user in the `@nextcapital` organization on npm. This section simply documents how the CI workflow works.
-
-`npx lerna publish from-package`
-
-Lerna will detect any new version bumps in the configured packages and publish those. If there are no packages to publish, lerna simply terminates.
+export default [
+  ...nextcapitalBase,
+  ...nextcapitalJest,
+  ...nextcapitalJSDoc,
+  ...nextcapitalReact,
+  // ......
+];
+```
 
 ## Contributing
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md)
 
 ### Maintainers
+
 [Mike Kreiser (@nc-kreiserm)](https://github.com/nc-kreiserm)

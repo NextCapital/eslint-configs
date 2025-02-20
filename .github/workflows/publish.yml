@@ -6,53 +6,30 @@ on:
 
 jobs:
   publish:
-    name: Publish all packages
+    strategy:
+      fail-fast: false
+      matrix:
+        cwd: [javascript, typescript]
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: '16.x'
+          node-version: lts/jod
       - name: Prepare npm auth
         run: echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > ./.npmrc
-      - name: Install Dependencies
-        run: npm ci
-      - name: Lerna Bootstrap
-        run: npx lerna bootstrap
-      - name: Update index
-        run: |
-          git update-index --assume-unchanged .npmrc
-      - name: Publish eslint-config-js-linter
-        working-directory: ./eslint-config-js-linter
-        run: |
+      - run: npm ci
+        working-directory: ${{ matrix.cwd }}
+      - run: |
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ./.npmrc
-          git update-index --assume-unchanged ./.npmrc
-          npm publish --access public
+          cp ../LICENSE.txt ./LICENSE.txt
+          git update-index --assume-unchanged ./
+        working-directory: ${{ matrix.cwd }}
         env:
           token: ${{ secrets.NPM_TOKEN }}
-      - name: Publish eslint-config-jest-linter
-        working-directory: ./eslint-config-jest-linter
-        run: |
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ./.npmrc
-          git update-index --assume-unchanged ./.npmrc
-          npm publish --access public
-        env:
-          token: ${{ secrets.NPM_TOKEN }}
-      - name: Publish eslint-config-jsdoc-linter
-        working-directory: ./eslint-config-jsdoc-linter
-        run: |
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ./.npmrc
-          git update-index --assume-unchanged ./.npmrc
-          npm publish --access public
-        env:
-          token: ${{ secrets.NPM_TOKEN }}
-      - name: Publish eslint-config-react-linter
-        working-directory: ./eslint-config-react-linter
-        run: |
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ./.npmrc
-          git update-index --assume-unchanged ./.npmrc
-          npm publish --access public
+      - run: npm run autopublish -- --use-public
+        working-directory: ${{ matrix.cwd }}
         env:
           token: ${{ secrets.NPM_TOKEN }}

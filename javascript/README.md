@@ -125,5 +125,6 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md)
 **IMPORTANT:** Versioning is handled by GitHub Actions through the `publish.yml` workflow configuration. DO NOT ATTEMPT TO PUBLISH PACKAGES YOURSELF. Publishing yourself should fail anyways because you need the auth token for an npm user in the `@nextcapital` organization on npm. This section simply documents how the CI workflow works.
 
 ### Maintainers
+
 [Mike Kreiser (@nc-kreiserm)](https://github.com/nc-kreiserm)
 
