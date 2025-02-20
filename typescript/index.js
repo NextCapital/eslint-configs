@@ -59,6 +59,13 @@ module.exports = [
     (p, c) => p.concat(require(c)),
     []
   )),
+  ...([
+    './base-rules/style'
+  ].reduce(
+    // eslint-disable-next-line import/no-dynamic-require,n/global-require
+    (p, c) => p.concat(require(c)),
+    []
+  )),
   {
     name: 'Test file specific rules',
     files: [
