@@ -1,6 +1,6 @@
 const tsParser = require('@typescript-eslint/parser');
 
-const jsJestConfig = require('../../javascript/jest/index');
+const jsJestConfig = require('@nextcapital/eslint-config/jest');
 
 module.exports = [
   ...jsJestConfig,

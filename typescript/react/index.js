@@ -6,7 +6,7 @@ const jsxA11y = require('eslint-plugin-jsx-a11y');
 
 const stylisticJsx = require('@stylistic/eslint-plugin-jsx');
 
-const nextcapitalReact = require('../../javascript/react/flat/rules');
+const nextcapitalReact = require('@nextcapital/eslint-config/react/flat/rules');
 
 module.exports = [
   {
