@@ -44,14 +44,14 @@ module.exports = [
     '@nextcapital/eslint-config/base/flat/imports',
     '@nextcapital/eslint-config/base/flat/strict'
   ].reduce(
-    // eslint-disable-next-line import/no-dynamic-require,n/global-require
+    // eslint-disable-next-line import/no-dynamic-require
     (p, c) => p.concat(require(c)),
     []
   )),
   ...([
     './base/style'
   ].reduce(
-    // eslint-disable-next-line import/no-dynamic-require,n/global-require
+    // eslint-disable-next-line import/no-dynamic-require
     (p, c) => p.concat(require(c)),
     []
   )),
