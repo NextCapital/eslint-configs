@@ -1,23 +1,27 @@
-const config = require('./index');
+// eslint-disable-next-line import/no-extraneous-dependencies
+const babelParser = require('@babel/eslint-parser');
+
+const config = require('@nextcapital/eslint-config');
 
 module.exports = [
   ...config,
-  // {
-  //   files: [],
-  //   rules: {
-  //     'sort-keys': 'error'
-  //   }
-  // },
+  {
+    languageOptions: {
+      parser: babelParser,
+      parserOptions: {
+        ecmaVersion: 2016,
+        sourceType: 'module',
+
+        requireConfigFile: false
+      }
+    }
+  },
   {
     files: [
-      'index.js',
-      'internal.js',
-      'jest/index.js',
-      'jsdoc/index.js',
-      'react/index.js'
+      'base/style.js'
     ],
     rules: {
-      '@typescript-eslint/no-require-imports': 'off'
+      'sort-keys': 'error'
     }
   }
 ];

@@ -41,7 +41,7 @@ module.exports = [
     './base/flat/imports',
     './base/flat/strict'
   ].reduce(
-    // eslint-disable-next-line import/no-dynamic-require,n/global-require
+    // eslint-disable-next-line import/no-dynamic-require
     (p, c) => p.concat(require(c)),
     []
   )),

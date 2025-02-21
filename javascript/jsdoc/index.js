@@ -31,7 +31,6 @@ module.exports = [
   {
     name: '@nextcapital/eslint-config/jsdoc - Disable require-jsdoc in test files',
     files: [
-      '**/*.{spec,test}.{js,mjs,cjs,jsx}',
       '**/*.{spec,test}.{js,mjs,cjs,jsx}'
     ],
     rules: {
