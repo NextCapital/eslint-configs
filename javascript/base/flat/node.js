@@ -3,7 +3,7 @@ const globals = require('globals');
 const base = require('../node');
 
 module.exports = [{
-  name: 'eslint-config-js-base/node',
+  name: '@nextcapital/eslint-config/base - node',
   languageOptions: {
     globals: globals.node
   },

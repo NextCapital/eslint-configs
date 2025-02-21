@@ -3,7 +3,7 @@ const stylistic = require('@stylistic/eslint-plugin');
 
 module.exports = [
   {
-    name: 'Default JS All Rules ON',
+    name: '@nextcapital/eslint-config/base - settings setup',
     linterOptions: {
       reportUnusedDisableDirectives: 'error',
       reportUnusedInlineConfigs: 'error'
@@ -17,7 +17,10 @@ module.exports = [
       '**/build/',
       '**/dist/',
       '**/ts-output/'
-    ],
+    ]
+  },
+  {
+    name: '@nextcapital/eslint-config/base - Enable eslint recommended rules',
     rules: js.configs.recommended.rules
   },
   {
@@ -43,7 +46,7 @@ module.exports = [
     []
   )),
   {
-    name: 'Test file specific rules',
+    name: '@nextcapital/eslint-config/base - Test file specific rules',
     files: [
       '**/*.{spec,test}.{js,mjs,cjs,jsx}'
     ],

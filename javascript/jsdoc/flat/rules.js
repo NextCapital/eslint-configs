@@ -1,6 +1,6 @@
 const baseConfig = require('../rules');
 
 module.exports = [{
-  name: 'jsdoc/rules',
+  name: '@nextcapital/eslint-config/jsdoc - rules',
   rules: baseConfig.rules
 }];

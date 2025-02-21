@@ -5,7 +5,7 @@ const stylistic = require('@stylistic/eslint-plugin');
 
 module.exports = [
   {
-    name: 'Default TS Recommended Rules ON',
+    name: '@nextcapital/eslint-config-typescript - settings setup',
     linterOptions: {
       reportUnusedDisableDirectives: 'error',
       reportUnusedInlineConfigs: 'error'
@@ -19,7 +19,10 @@ module.exports = [
       '**/build/',
       '**/dist/',
       '**/ts-output/'
-    ],
+    ]
+  },
+  {
+    name: '@nextcapital/eslint-config-typescript - Enable eslint recommended JS rules as base',
     rules: js.configs.recommended.rules
   },
   ...ts.configs.recommended,
@@ -53,7 +56,7 @@ module.exports = [
     []
   )),
   {
-    name: 'Test file specific rules',
+    name: '@nextcapital/eslint-config-typescript/base - Test file specific rules',
     files: [
       '**/*.{spec,test}.{ts,tsx}'
     ],

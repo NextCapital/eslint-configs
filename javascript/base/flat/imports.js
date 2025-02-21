@@ -4,7 +4,7 @@ const globals = require('globals');
 const baseConfig = require('../imports');
 
 module.exports = [importPlugin.flatConfigs.recommended, {
-  name: 'eslint-config-js-base/imports',
+  name: '@nextcapital/eslint-config/base - imports',
   languageOptions: {
     globals: globals.es2015,
     parserOptions: baseConfig.parserOptions

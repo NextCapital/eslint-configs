@@ -1,6 +1,6 @@
 const baseConfig = require('../best-practices');
 
 module.exports = [{
-  name: 'eslint-config-js-base/best-practices',
+  name: '@nextcapital/eslint-config/base - best-practices',
   rules: baseConfig.rules
 }];

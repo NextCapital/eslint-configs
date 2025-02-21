@@ -4,7 +4,7 @@ const nextcapitalJSDoc = require('./flat/rules');
 
 module.exports = [
   {
-    name: 'JSDoc Plugin Setup',
+    name: '@nextcapital/eslint-config/jsdoc - settings setup',
     linterOptions: {
       reportUnusedDisableDirectives: 'error',
       reportUnusedInlineConfigs: 'error'
@@ -24,11 +24,12 @@ module.exports = [
     }
   },
   {
-    name: 'JSDdoc - Enable recommended rules as errors',
+    name: '@nextcapital/eslint-config/jsdoc - Enable plugin recommended rules as errors',
     ...pluginJSDoc.configs['flat/recommended-error']
   },
   ...nextcapitalJSDoc,
   {
+    name: '@nextcapital/eslint-config/jsdoc - Disable require-jsdoc in test files',
     files: [
       '**/*.{spec,test}.{js,mjs,cjs,jsx}',
       '**/*.{spec,test}.{js,mjs,cjs,jsx}'

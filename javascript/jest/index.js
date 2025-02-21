@@ -4,7 +4,7 @@ const nextcapitalJest = require('./flat/rules');
 
 module.exports = [
   {
-    name: 'Jest Plugin Setup',
+    name: '@nextcapital/eslint-config/jest - settings setup',
     languageOptions: {
       globals: pluginJest.environments.globals.globals
     },
@@ -27,7 +27,7 @@ module.exports = [
     }
   },
   {
-    name: 'jest - Enable all rules',
+    name: '@nextcapital/eslint-config/jest - Enable plugin recommended rules',
     ...pluginJest.configs['flat/recommended']
   },
   ...nextcapitalJest
