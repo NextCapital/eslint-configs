@@ -27,6 +27,7 @@ module.exports = [
     name: '@nextcapital/eslint-config/jsdoc - Enable plugin recommended rules as errors',
     ...pluginJSDoc.configs['flat/recommended-error']
   },
+  ...pluginJSDoc.configs.examples,
   ...nextcapitalJSDoc,
   {
     name: '@nextcapital/eslint-config/jsdoc - Disable require-jsdoc in test files',
