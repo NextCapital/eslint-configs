@@ -1,7 +1,5 @@
 module.exports = {
   rules: {
-    'jsdoc/check-examples': 'warn',
-
     'jsdoc/informative-docs': 'warn',
 
     'jsdoc/no-bad-blocks': 'warn',
