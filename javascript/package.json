@@ -7,6 +7,7 @@
     ".": "./index.js",
     "./jest": "./jest/index.js",
     "./jsdoc": "./jsdoc/index.js",
+    "./node": "./node/index.js",
     "./react": "./react/index.js",
 
     "./base-rules/flat/*": "./base-rules/flat/*.js",
@@ -15,6 +16,8 @@
     "./jest/flat/*.js": "./jest/flat/*.js",
     "./jsdoc/flat/*": "./jsdoc/flat/*.js",
     "./jsdoc/flat/*.js": "./jsdoc/flat/*.js",
+    "./node/flat/*": "./node/flat/*.js",
+    "./node/flat/*.js": "./node/flat/*.js",
     "./react/flat/*": "./react/flat/*.js",
     "./react/flat/*.js": "./react/flat/*.js"
   },
@@ -41,6 +44,7 @@
     "inspect-config:base": "eslint --inspect-config --config=index.js",
     "inspect-config:jest": "eslint --inspect-config --config=jest/index.js",
     "inspect-config:jsdoc": "eslint --inspect-config --config=jsdoc/index.js",
+    "inspect-config:node": "eslint --inspect-config --config=node/index.js",
     "inspect-config:react": "eslint --inspect-config --config=react/index.js",
     "lint": "eslint --config=internal.js --cache"
   },

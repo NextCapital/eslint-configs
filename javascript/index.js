@@ -2,8 +2,6 @@ const babelParser = require('@babel/eslint-parser');
 const js = require('@eslint/js');
 const stylistic = require('@stylistic/eslint-plugin');
 
-const nodePlugin = require('eslint-plugin-n');
-
 module.exports = [
   {
     name: 'Default JS All Rules ON',
@@ -30,9 +28,6 @@ module.exports = [
       '**/dist/',
       '**/ts-output/'
     ],
-    plugins: {
-      n: nodePlugin
-    },
     rules: js.configs.recommended.rules
   },
   {
