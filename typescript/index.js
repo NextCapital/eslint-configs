@@ -3,7 +3,6 @@ const ts = require('typescript-eslint');
 const tsParser = require('@typescript-eslint/parser');
 
 const stylistic = require('@stylistic/eslint-plugin');
-const nodePlugin = require('eslint-plugin-n');
 
 module.exports = [
   {
@@ -31,9 +30,6 @@ module.exports = [
       '**/dist/',
       '**/ts-output/'
     ],
-    plugins: {
-      n: nodePlugin
-    },
     rules: js.configs.recommended.rules
   },
   ...ts.configs.recommended,

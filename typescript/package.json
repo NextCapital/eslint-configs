@@ -7,6 +7,7 @@
     ".": "./index.js",
     "./jest": "./jest/index.js",
     "./jsdoc": "./jsdoc/index.js",
+    "./node": "./node/index.js",
     "./react": "./react/index.js",
 
     "./base/*": "./base/*.js",
@@ -35,6 +36,7 @@
     "inspect-config:base": "eslint --inspect-config --config=index.js",
     "inspect-config:jest": "eslint --inspect-config --config=jest/index.js",
     "inspect-config:jsdoc": "eslint --inspect-config --config=jsdoc/index.js",
+    "inspect-config:node": "eslint --inspect-config --config=node/index.js",
     "inspect-config:react": "eslint --inspect-config --config=react/index.js",
     "lint": "eslint --config=../javascript/internal.js --cache"
   },
