@@ -1,27 +1,43 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
+const babelParser = require('@babel/eslint-parser');
+
 const config = require('./index');
 
 module.exports = [
   ...config,
   {
     files: [
-      '**/base-rules/best-practices.js',
-      '**/base-rules/errors.js',
-      '**/base-rules/es6.js',
-      '**/base-rules/imports.js',
-      '**/base-rules/node.js',
-      '**/base-rules/strict.js',
-      '**/base-rules/style.js',
-      '**/base-rules/variables.js',
+      '**/base/best-practices.js',
+      '**/base/errors.js',
+      '**/base/es6.js',
+      '**/base/imports.js',
+      '**/base/node.js',
+      '**/base/strict.js',
+      '**/base/style.js',
+      '**/base/variables.js',
 
       '**/jest/rules.js',
 
       '**/jsdoc/rules.js',
+
+      '**/node/rules.js',
 
       '**/react/jsx-a11y.js',
       '**/react/rules.js'
     ],
     rules: {
       'sort-keys': 'error'
+    }
+  },
+  {
+    languageOptions: {
+      parser: babelParser,
+      parserOptions: {
+        ecmaVersion: 2016,
+        sourceType: 'module',
+
+        requireConfigFile: false
+      }
     }
   }
 ];

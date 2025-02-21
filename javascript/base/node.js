@@ -1,23 +1,10 @@
 module.exports = {
-  env: {
-    node: true
-  },
-
   rules: {
     // enforce return after a callback
     'callback-return': 'off',
 
     // enforces error handling in callbacks (node environment)
     'handle-callback-err': 'off',
-
-    // require all requires be top-level
-    'n/global-require': 'error',
-
-    // disallow use of new operator with the require function
-    'n/no-new-require': 'error',
-
-    // disallow string concatenation with __dirname and __filename
-    'n/no-path-concat': 'error',
 
     // disallow use of the Buffer() constructor
     'no-buffer-constructor': 'error',

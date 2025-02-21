@@ -1,6 +1,6 @@
 const base = require('../variables');
 
 module.exports = [{
-  name: 'eslint-config-js-base/variables',
+  name: '@nextcapital/eslint-config/base - variables',
   rules: base.rules
 }];

@@ -1,4 +1,3 @@
-const babelParser = require('@babel/eslint-parser');
 const globals = require('globals');
 
 const pluginReact = require('eslint-plugin-react');
@@ -10,15 +9,10 @@ const nextcapitalReact = require('./flat/rules');
 
 module.exports = [
   {
-    name: 'React Plugin Setup',
+    name: '@nextcapital/eslint-config/react - settings setup',
     languageOptions: {
-      parser: babelParser,
       parserOptions: {
-        ecmaVersion: 2016,
-        sourceType: 'module',
-
         jsx: true,
-        requireConfigFile: false,
         ...pluginReact.configs.flat.recommended.languageOptions
       },
       globals: {
@@ -47,7 +41,7 @@ module.exports = [
     }
   },
   {
-    name: 'React - Enable recommended rules as errors',
+    name: '@nextcapital/eslint-config/react - Enable plugin recommended rules as errors',
     ...pluginReact.configs.flat.recommended,
     ...pluginReact.configs.flat['jsx-runtime'] // Add this if you are using React 17+
   },
@@ -62,6 +56,7 @@ module.exports = [
   },
   ...nextcapitalReact,
   {
+    name: '@nextcapital/eslint-config/react - Test file rules',
     files: [
       '**/*.{spec,test}.{js,mjs,cjs,jsx}'
     ],

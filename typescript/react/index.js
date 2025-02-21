@@ -1,24 +1,19 @@
 const globals = require('globals');
-const tsParser = require('@typescript-eslint/parser');
 
 const pluginReact = require('eslint-plugin-react');
 const jsxA11y = require('eslint-plugin-jsx-a11y');
 
 const stylisticJsx = require('@stylistic/eslint-plugin-jsx');
 
-const nextcapitalReact = require('@nextcapital/eslint-config/react/flat/rules');
+const nextcapitalReactA11y = require('@nextcapital/eslint-config/react/flat/jsx-a11y');
+const nextcapitalReactRules = require('@nextcapital/eslint-config/react/flat/rules');
 
 module.exports = [
   {
-    name: 'React TS Plugin Setup',
+    name: '@nextcapital/eslint-config-typescript/react - settings setup',
     languageOptions: {
-      parser: tsParser,
       parserOptions: {
-        ecmaVersion: 2016,
-        sourceType: 'module',
-
         jsx: true,
-        requireConfigFile: false,
         ...pluginReact.configs.flat.recommended.languageOptions
       },
       globals: {
@@ -47,7 +42,7 @@ module.exports = [
     }
   },
   {
-    name: 'React - Enable recommended rules as errors',
+    name: '@nextcapital/eslint-config-typescript/react - Enable plugin recommended rules as errors',
     ...pluginReact.configs.flat.recommended,
     ...pluginReact.configs.flat['jsx-runtime'] // Add this if you are using React 17+
   },
@@ -60,8 +55,10 @@ module.exports = [
     name: '@stylistic - Enable all JSX rules',
     ...stylisticJsx.configs['all-flat']
   },
-  ...nextcapitalReact,
+  ...nextcapitalReactRules,
+  ...nextcapitalReactA11y,
   {
+    name: '@nextcapital/eslint-config-typescript/react - rules',
     rules: {
       'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
       'react/jsx-props-no-multi-spaces': 'off',
@@ -69,6 +66,7 @@ module.exports = [
     }
   },
   {
+    name: '@nextcapital/eslint-config-typescript/react - Test file rules',
     files: [
       '**/*.{spec,test}.{ts,tsx}'
     ],

@@ -6,15 +6,22 @@
   "exports": {
     ".": "./index.js",
     "./jest": "./jest/index.js",
+    "./jest.js": "./jest/index.js",
     "./jsdoc": "./jsdoc/index.js",
+    "./jsdoc.js": "./jsdoc/index.js",
+    "./node": "./node/index.js",
+    "./node.js": "./node/index.js",
     "./react": "./react/index.js",
+    "./react.js": "./react/index.js",
 
-    "./base-rules/flat/*": "./base-rules/flat/*.js",
-    "./base-rules/flat/*.js": "./base-rules/flat/*.js",
+    "./base/flat/*": "./base/flat/*.js",
+    "./base/flat/*.js": "./base/flat/*.js",
     "./jest/flat/*": "./jest/flat/*.js",
     "./jest/flat/*.js": "./jest/flat/*.js",
     "./jsdoc/flat/*": "./jsdoc/flat/*.js",
     "./jsdoc/flat/*.js": "./jsdoc/flat/*.js",
+    "./node/flat/*": "./node/flat/*.js",
+    "./node/flat/*.js": "./node/flat/*.js",
     "./react/flat/*": "./react/flat/*.js",
     "./react/flat/*.js": "./react/flat/*.js"
   },
@@ -41,6 +48,7 @@
     "inspect-config:base": "eslint --inspect-config --config=index.js",
     "inspect-config:jest": "eslint --inspect-config --config=jest/index.js",
     "inspect-config:jsdoc": "eslint --inspect-config --config=jsdoc/index.js",
+    "inspect-config:node": "eslint --inspect-config --config=node/index.js",
     "inspect-config:react": "eslint --inspect-config --config=react/index.js",
     "lint": "eslint --config=internal.js --cache"
   },
@@ -49,8 +57,6 @@
     "eslint-plugin-import": "^2.30.0"
   },
   "dependencies": {
-    "@babel/core": "^7.26.7",
-    "@babel/eslint-parser": "^7.26.5",
     "@eslint/js": "^9.19.0",
     "@stylistic/eslint-plugin": "^3.0.1",
     "@stylistic/eslint-plugin-jsx": "^3.1.0",
@@ -63,6 +69,8 @@
     "globals": "^15.14.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.26.7",
+    "@babel/eslint-parser": "^7.26.5",
     "auto-publish-package": "^2.0.0",
     "eslint": "^9.19.0",
     "eslint-plugin-import": "^2.30.0"

@@ -1,22 +1,11 @@
 const js = require('@eslint/js');
 const ts = require('typescript-eslint');
-const tsParser = require('@typescript-eslint/parser');
 
 const stylistic = require('@stylistic/eslint-plugin');
-const nodePlugin = require('eslint-plugin-n');
 
 module.exports = [
   {
-    name: 'Default TS Recommended Rules ON',
-    languageOptions: {
-      parser: tsParser,
-      parserOptions: {
-        ecmaVersion: 2016,
-        sourceType: 'module',
-
-        requireConfigFile: false
-      }
-    },
+    name: '@nextcapital/eslint-config-typescript - settings setup',
     linterOptions: {
       reportUnusedDisableDirectives: 'error',
       reportUnusedInlineConfigs: 'error'
@@ -30,10 +19,10 @@ module.exports = [
       '**/build/',
       '**/dist/',
       '**/ts-output/'
-    ],
-    plugins: {
-      n: nodePlugin
-    },
+    ]
+  },
+  {
+    name: '@nextcapital/eslint-config-typescript - Enable eslint recommended JS rules as base',
     rules: js.configs.recommended.rules
   },
   ...ts.configs.recommended,
@@ -46,28 +35,28 @@ module.exports = [
     ...stylistic.configs['recommended-flat']
   },
   ...([
-    '@nextcapital/eslint-config/base-rules/flat/best-practices',
-    '@nextcapital/eslint-config/base-rules/flat/errors',
-    '@nextcapital/eslint-config/base-rules/flat/node',
-    '@nextcapital/eslint-config/base-rules/flat/style',
-    '@nextcapital/eslint-config/base-rules/flat/variables',
-    '@nextcapital/eslint-config/base-rules/flat/es6',
-    '@nextcapital/eslint-config/base-rules/flat/imports',
-    '@nextcapital/eslint-config/base-rules/flat/strict'
+    '@nextcapital/eslint-config/base/flat/best-practices',
+    '@nextcapital/eslint-config/base/flat/errors',
+    '@nextcapital/eslint-config/base/flat/node',
+    '@nextcapital/eslint-config/base/flat/style',
+    '@nextcapital/eslint-config/base/flat/variables',
+    '@nextcapital/eslint-config/base/flat/es6',
+    '@nextcapital/eslint-config/base/flat/imports',
+    '@nextcapital/eslint-config/base/flat/strict'
   ].reduce(
     // eslint-disable-next-line import/no-dynamic-require,n/global-require
     (p, c) => p.concat(require(c)),
     []
   )),
   ...([
-    './base-rules/style'
+    './base/style'
   ].reduce(
     // eslint-disable-next-line import/no-dynamic-require,n/global-require
     (p, c) => p.concat(require(c)),
     []
   )),
   {
-    name: 'Test file specific rules',
+    name: '@nextcapital/eslint-config-typescript/base - Test file specific rules',
     files: [
       '**/*.{spec,test}.{ts,tsx}'
     ],

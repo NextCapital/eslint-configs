@@ -1,5 +1,5 @@
 module.exports = [{
-  name: '@nextcapital/eslint-config-typescript/style',
+  name: '@nextcapital/eslint-config-typescript/base - style',
   rules: {
     '@stylistic/member-delimiter-style': ['error', {
       multiline: {

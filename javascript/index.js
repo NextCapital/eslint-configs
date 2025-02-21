@@ -1,21 +1,9 @@
-const babelParser = require('@babel/eslint-parser');
 const js = require('@eslint/js');
 const stylistic = require('@stylistic/eslint-plugin');
 
-const nodePlugin = require('eslint-plugin-n');
-
 module.exports = [
   {
-    name: 'Default JS All Rules ON',
-    languageOptions: {
-      parser: babelParser,
-      parserOptions: {
-        ecmaVersion: 2016,
-        sourceType: 'module',
-
-        requireConfigFile: false
-      }
-    },
+    name: '@nextcapital/eslint-config/base - settings setup',
     linterOptions: {
       reportUnusedDisableDirectives: 'error',
       reportUnusedInlineConfigs: 'error'
@@ -29,10 +17,10 @@ module.exports = [
       '**/build/',
       '**/dist/',
       '**/ts-output/'
-    ],
-    plugins: {
-      n: nodePlugin
-    },
+    ]
+  },
+  {
+    name: '@nextcapital/eslint-config/base - Enable eslint recommended rules',
     rules: js.configs.recommended.rules
   },
   {
@@ -44,21 +32,21 @@ module.exports = [
     ...stylistic.configs['recommended-flat']
   },
   ...([
-    './base-rules/flat/best-practices',
-    './base-rules/flat/errors',
-    './base-rules/flat/node',
-    './base-rules/flat/style',
-    './base-rules/flat/variables',
-    './base-rules/flat/es6',
-    './base-rules/flat/imports',
-    './base-rules/flat/strict'
+    './base/flat/best-practices',
+    './base/flat/errors',
+    './base/flat/node',
+    './base/flat/style',
+    './base/flat/variables',
+    './base/flat/es6',
+    './base/flat/imports',
+    './base/flat/strict'
   ].reduce(
-    // eslint-disable-next-line import/no-dynamic-require,n/global-require
+    // eslint-disable-next-line import/no-dynamic-require
     (p, c) => p.concat(require(c)),
     []
   )),
   {
-    name: 'Test file specific rules',
+    name: '@nextcapital/eslint-config/base - Test file specific rules',
     files: [
       '**/*.{spec,test}.{js,mjs,cjs,jsx}'
     ],

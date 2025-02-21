@@ -6,11 +6,16 @@
   "exports": {
     ".": "./index.js",
     "./jest": "./jest/index.js",
+    "./jest.js": "./jest/index.js",
     "./jsdoc": "./jsdoc/index.js",
+    "./jsdoc.js": "./jsdoc/index.js",
+    "./node": "./node/index.js",
+    "./node.js": "./node/index.js",
     "./react": "./react/index.js",
+    "./react.js": "./react/index.js",
 
-    "./base-rules/*": "./base-rules/*.js",
-    "./base-rules/*.js": "./base-rules/*.js"
+    "./base/*": "./base/*.js",
+    "./base/*.js": "./base/*.js"
   },
   "license": "Apache-2.0",
   "engines": {
@@ -35,8 +40,9 @@
     "inspect-config:base": "eslint --inspect-config --config=index.js",
     "inspect-config:jest": "eslint --inspect-config --config=jest/index.js",
     "inspect-config:jsdoc": "eslint --inspect-config --config=jsdoc/index.js",
+    "inspect-config:node": "eslint --inspect-config --config=node/index.js",
     "inspect-config:react": "eslint --inspect-config --config=react/index.js",
-    "lint": "eslint --config=../javascript/internal.js --cache"
+    "lint": "eslint --config=./internal.js --cache"
   },
   "peerDependencies": {
     "eslint": ">= 9",
@@ -48,7 +54,6 @@
     "@eslint/js": "^9.19.0",
     "@stylistic/eslint-plugin": "^3.0.1",
     "@stylistic/eslint-plugin-jsx": "^3.1.0",
-    "@typescript-eslint/parser": "^8.24.1",
     "confusing-browser-globals": "^1.0.11",
     "eslint-plugin-jest": "^28.11.0",
     "eslint-plugin-jsdoc": "^50.6.3",
@@ -61,6 +66,7 @@
   "devDependencies": {
     "@babel/core": "^7.26.7",
     "@babel/eslint-parser": "^7.26.5",
+    "@typescript-eslint/parser": "^8.24.1",
     "auto-publish-package": "^2.0.0",
     "eslint": "^9.19.0",
     "eslint-plugin-import": "^2.30.0",
