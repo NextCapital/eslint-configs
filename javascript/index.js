@@ -39,14 +39,14 @@ module.exports = [
     ...stylistic.configs['recommended-flat']
   },
   ...([
-    './base-rules/flat/best-practices',
-    './base-rules/flat/errors',
-    './base-rules/flat/node',
-    './base-rules/flat/style',
-    './base-rules/flat/variables',
-    './base-rules/flat/es6',
-    './base-rules/flat/imports',
-    './base-rules/flat/strict'
+    './base/flat/best-practices',
+    './base/flat/errors',
+    './base/flat/node',
+    './base/flat/style',
+    './base/flat/variables',
+    './base/flat/es6',
+    './base/flat/imports',
+    './base/flat/strict'
   ].reduce(
     // eslint-disable-next-line import/no-dynamic-require,n/global-require
     (p, c) => p.concat(require(c)),

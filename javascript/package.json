@@ -10,8 +10,8 @@
     "./node": "./node/index.js",
     "./react": "./react/index.js",
 
-    "./base-rules/flat/*": "./base-rules/flat/*.js",
-    "./base-rules/flat/*.js": "./base-rules/flat/*.js",
+    "./base/flat/*": "./base/flat/*.js",
+    "./base/flat/*.js": "./base/flat/*.js",
     "./jest/flat/*": "./jest/flat/*.js",
     "./jest/flat/*.js": "./jest/flat/*.js",
     "./jsdoc/flat/*": "./jsdoc/flat/*.js",
