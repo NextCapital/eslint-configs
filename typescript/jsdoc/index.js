@@ -1,13 +1,8 @@
-const tsParser = require('@typescript-eslint/parser');
-
 const jsJSDocConfig = require('@nextcapital/eslint-config/jsdoc');
 
 module.exports = [
   ...jsJSDocConfig,
   {
-    languageOptions: {
-      parser: tsParser
-    },
     files: [
       '**/*.{ts,tsx}'
     ]

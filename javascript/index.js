@@ -1,19 +1,9 @@
-const babelParser = require('@babel/eslint-parser');
 const js = require('@eslint/js');
 const stylistic = require('@stylistic/eslint-plugin');
 
 module.exports = [
   {
     name: 'Default JS All Rules ON',
-    languageOptions: {
-      parser: babelParser,
-      parserOptions: {
-        ecmaVersion: 2016,
-        sourceType: 'module',
-
-        requireConfigFile: false
-      }
-    },
     linterOptions: {
       reportUnusedDisableDirectives: 'error',
       reportUnusedInlineConfigs: 'error'

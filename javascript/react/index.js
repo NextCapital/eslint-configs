@@ -1,4 +1,3 @@
-const babelParser = require('@babel/eslint-parser');
 const globals = require('globals');
 
 const pluginReact = require('eslint-plugin-react');
@@ -12,13 +11,8 @@ module.exports = [
   {
     name: 'React Plugin Setup',
     languageOptions: {
-      parser: babelParser,
       parserOptions: {
-        ecmaVersion: 2016,
-        sourceType: 'module',
-
         jsx: true,
-        requireConfigFile: false,
         ...pluginReact.configs.flat.recommended.languageOptions
       },
       globals: {

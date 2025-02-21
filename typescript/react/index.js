@@ -1,5 +1,4 @@
 const globals = require('globals');
-const tsParser = require('@typescript-eslint/parser');
 
 const pluginReact = require('eslint-plugin-react');
 const jsxA11y = require('eslint-plugin-jsx-a11y');
@@ -12,13 +11,8 @@ module.exports = [
   {
     name: 'React TS Plugin Setup',
     languageOptions: {
-      parser: tsParser,
       parserOptions: {
-        ecmaVersion: 2016,
-        sourceType: 'module',
-
         jsx: true,
-        requireConfigFile: false,
         ...pluginReact.configs.flat.recommended.languageOptions
       },
       globals: {

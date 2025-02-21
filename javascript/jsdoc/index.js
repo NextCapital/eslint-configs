@@ -1,5 +1,3 @@
-const babelParser = require('@babel/eslint-parser');
-
 const pluginJSDoc = require('eslint-plugin-jsdoc');
 
 const nextcapitalJSDoc = require('./flat/rules');
@@ -7,15 +5,6 @@ const nextcapitalJSDoc = require('./flat/rules');
 module.exports = [
   {
     name: 'JSDoc Plugin Setup',
-    languageOptions: {
-      parser: babelParser,
-      parserOptions: {
-        ecmaVersion: 2016,
-        sourceType: 'module',
-
-        requireConfigFile: false
-      }
-    },
     linterOptions: {
       reportUnusedDisableDirectives: 'error',
       reportUnusedInlineConfigs: 'error'

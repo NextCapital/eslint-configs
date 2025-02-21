@@ -1,21 +1,11 @@
 const js = require('@eslint/js');
 const ts = require('typescript-eslint');
-const tsParser = require('@typescript-eslint/parser');
 
 const stylistic = require('@stylistic/eslint-plugin');
 
 module.exports = [
   {
     name: 'Default TS Recommended Rules ON',
-    languageOptions: {
-      parser: tsParser,
-      parserOptions: {
-        ecmaVersion: 2016,
-        sourceType: 'module',
-
-        requireConfigFile: false
-      }
-    },
     linterOptions: {
       reportUnusedDisableDirectives: 'error',
       reportUnusedInlineConfigs: 'error'
