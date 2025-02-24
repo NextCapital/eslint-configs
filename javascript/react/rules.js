@@ -1,55 +1,61 @@
 module.exports = {
   rules: {
     // Ensures inline tags are not rendered without spaces between them
-    '@stylistic/jsx/jsx-child-element-spacing': 'off',
+    '@stylistic/jsx-child-element-spacing': 'off',
 
     // Validate closing bracket location in JSX
-    '@stylistic/jsx/jsx-closing-bracket-location': ['error', 'line-aligned'],
+    '@stylistic/jsx-closing-bracket-location': ['error', 'line-aligned'],
+
+    '@stylistic/jsx-closing-tag-location': 'error',
 
     // Enforce curly braces or disallow unnecessary curly braces in JSX props and/or children
-    '@stylistic/jsx/jsx-curly-brace-presence': ['error', {
+    '@stylistic/jsx-curly-brace-presence': ['error', {
       children: 'never',
       props: 'never'
     }],
 
     // Enforce linebreaks in curly braces in JSX attributes and expressions.
-    '@stylistic/jsx/jsx-curly-newline': ['error', {
+    '@stylistic/jsx-curly-newline': ['error', {
       multiline: 'consistent',
       singleline: 'consistent'
     }],
 
     // Enforce or disallow spaces inside of curly braces in JSX attributes
-    '@stylistic/jsx/jsx-curly-spacing': ['error', { when: 'always' }],
+    '@stylistic/jsx-curly-spacing': ['error', { when: 'always' }],
 
     // Enforce spacing around jsx equals signs
-    '@stylistic/jsx/jsx-equals-spacing': ['error', 'never'],
+    '@stylistic/jsx-equals-spacing': ['error', 'never'],
 
     // Require that the first prop in a JSX element be on a new line when the element is multiline
-    '@stylistic/jsx/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
+    '@stylistic/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
+
+    '@stylistic/jsx-function-call-newline': ['error', 'multiline'],
 
     // Validate props indentation in JSX
-    '@stylistic/jsx/jsx-indent-props': ['error', 2],
+    '@stylistic/jsx-indent-props': ['error', 2],
 
     // Limit maximum of props on a single line in JSX
-    '@stylistic/jsx/jsx-max-props-per-line': ['error', { maximum: 1, when: 'multiline' }],
+    '@stylistic/jsx-max-props-per-line': ['error', { maximum: 1, when: 'multiline' }],
 
     // Enforce a new line after jsx elements and expressions
-    '@stylistic/jsx/jsx-newline': 'off',
+    '@stylistic/jsx-newline': 'off',
 
     // One JSX Element Per Line
-    '@stylistic/jsx/jsx-one-expression-per-line': ['error', { allow: 'single-child' }],
+    '@stylistic/jsx-one-expression-per-line': ['error', { allow: 'single-child' }],
 
     // Enforce PascalCase for user-defined JSX components
-    '@stylistic/jsx/jsx-pascal-case': ['error', {
+    '@stylistic/jsx-pascal-case': ['error', {
       allowAllCaps: true,
       ignore: []
     }],
 
     // Disallow multiple spaces between inline JSX props
-    '@stylistic/jsx/jsx-props-no-multi-spaces': 'error',
+    '@stylistic/jsx-props-no-multi-spaces': 'error',
+
+    '@stylistic/jsx-quotes': 'error',
 
     // Enforce props alphabetical sorting
-    '@stylistic/jsx/jsx-sort-props': ['off', {
+    '@stylistic/jsx-sort-props': ['off', {
       callbacksLast: false,
       ignoreCase: true,
       noSortAlphabetically: false,
@@ -59,7 +65,7 @@ module.exports = {
     }],
 
     // Validate whitespace in and around the JSX opening and closing brackets
-    '@stylistic/jsx/jsx-tag-spacing': ['error', {
+    '@stylistic/jsx-tag-spacing': ['error', {
       afterOpening: 'never',
       beforeClosing: 'never',
       beforeSelfClosing: 'always',
@@ -67,7 +73,7 @@ module.exports = {
     }],
 
     // Prevent missing parentheses around multilines JSX
-    '@stylistic/jsx/jsx-wrap-multilines': ['error', {
+    '@stylistic/jsx-wrap-multilines': ['error', {
       arrow: 'parens-new-line',
       assignment: 'parens-new-line',
       condition: 'parens-new-line',
