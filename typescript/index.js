@@ -48,6 +48,12 @@ module.exports = [
     (p, c) => p.concat(require(c)),
     []
   )),
+  {
+    name: '@nextcapital/eslint-config-typescript - Disable duplicate JS rules',
+    rules: {
+      'no-unused-vars': 'off'
+    }
+  },
   ...([
     './base/style'
   ].reduce(
