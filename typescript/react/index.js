@@ -36,7 +36,6 @@ module.exports = [
       '**/ts-output/'
     ],
     plugins: {
-      'jsx-a11y': jsxA11y,
       react: pluginReact,
       '@stylistic/jsx': stylisticJsx
     }
