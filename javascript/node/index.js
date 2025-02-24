@@ -19,7 +19,16 @@ module.exports = [
       '**/build/',
       '**/dist/',
       '**/ts-output/'
-    ]
+    ],
+    settings: {
+      n: {
+        tryExtensions: [
+          '.js',
+          '.jsx',
+          '.json'
+        ]
+      }
+    }
   },
   ...nextcapitalNode
 ];
