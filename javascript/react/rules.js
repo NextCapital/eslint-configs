@@ -178,7 +178,7 @@ module.exports = {
     'react/jsx-filename-extension': ['error', { extensions: ['.jsx'] }],
 
     // Enforce shorthand or standard form for React fragments
-    'react/jsx-fragments': ['error', 'syntax'],
+    'react/jsx-fragments': ['error', 'element'],
 
     // Enforce event handler naming conventions in JSX
     'react/jsx-handler-names': ['off', {

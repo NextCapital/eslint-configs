@@ -1,6 +1,6 @@
 {
   "name": "@nextcapital/eslint-config",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "ESLint config to enforce our styleguide",
   "main": "index.js",
   "exports": {
@@ -28,7 +28,7 @@
   "license": "Apache-2.0",
   "engines": {
     "node": ">= 18",
-    "npm": ">= 10"
+    "npm": ">= 9"
   },
   "repository": {
     "type": "git",
