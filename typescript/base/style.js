@@ -11,6 +11,11 @@ module.exports = [{
         delimiter: 'semi',
         requireLast: true
       }
-    }]
+    }],
+
+    '@typescript-eslint/no-use-before-define': ['error', {
+      ignoreTypeReferences: true
+    }],
+    'no-use-before-define': 'off'
   }
 }];
