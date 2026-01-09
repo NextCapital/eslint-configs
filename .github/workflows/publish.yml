@@ -4,6 +4,9 @@ on:
     branches:
       - main
 
+permissions:
+  id-token: write # Required for OIDC authentication
+
 jobs:
   publish:
     strategy:
@@ -18,12 +21,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 24
-      - name: Prepare npm auth
-        run: echo '//registry.npmjs.org/' > ./.npmrc
       - run: npm ci
         working-directory: ${{ matrix.cwd }}
       - run: |
-          echo "//registry.npmjs.org/" > ./.npmrc
           cp ../LICENSE.txt ./LICENSE.txt
           git update-index --assume-unchanged ./
         working-directory: ${{ matrix.cwd }}
