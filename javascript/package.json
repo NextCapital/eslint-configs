@@ -32,16 +32,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NextCapital/eslint-config.git"
+    "url": "git+https://github.com/NextCapital/eslint-configs.git"
   },
   "author": {
     "name": "NextCapital Group",
     "url": "https://nextcapital.com"
   },
   "bugs": {
-    "url": "https://github.com/NextCapital/eslint-config/issues"
+    "url": "https://github.com/NextCapital/eslint-configs/issues"
   },
-  "homepage": "https://github.com/NextCapital/eslint-config#readme",
+  "homepage": "https://github.com/NextCapital/eslint-configs#readme",
   "scripts": {
     "autopublish": "auto-publish-package",
     "ci:local": "npm run lint",
