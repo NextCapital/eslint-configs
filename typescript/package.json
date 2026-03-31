@@ -1,6 +1,6 @@
 {
   "name": "@nextcapital/eslint-config-typescript",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "ESLint config to enforce our styleguide",
   "main": "index.js",
   "exports": {
@@ -13,7 +13,6 @@
     "./node.js": "./node/index.js",
     "./react": "./react/index.js",
     "./react.js": "./react/index.js",
-
     "./base/*": "./base/*.js",
     "./base/*.js": "./base/*.js"
   },
@@ -50,7 +49,7 @@
     "typescript": ">= 4"
   },
   "dependencies": {
-    "@nextcapital/eslint-config": "^0.1.6",
+    "@nextcapital/eslint-config": "^0.1.7",
     "@eslint/js": "^9.19.0",
     "@stylistic/eslint-plugin": "^5.10.0",
     "confusing-browser-globals": "^1.0.11",
