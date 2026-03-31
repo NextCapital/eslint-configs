@@ -1,6 +1,6 @@
 {
   "name": "@nextcapital/eslint-config-typescript",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "ESLint config to enforce our styleguide",
   "main": "index.js",
   "exports": {
@@ -13,7 +13,6 @@
     "./node.js": "./node/index.js",
     "./react": "./react/index.js",
     "./react.js": "./react/index.js",
-
     "./base/*": "./base/*.js",
     "./base/*.js": "./base/*.js"
   },
