@@ -2,9 +2,17 @@
 
 [![NextCapital Open Source](https://img.shields.io/badge/NextCapital-Open%20Source-%2300a5f6?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAA/FBMVEUApfYAAAAApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYApfYk6uC4AAAAU3RSTlMAAJHwVI7ULQcDHcG4FyyxdAE13JQInQLv+G4Kl9AoePvqRynk6UYLnNNrZxrCsxLDsBPPK3Np5UAu51X0YpnSKjbd/oQFGboepg+0cZPEIATmP31l8v0AAAC1SURBVBgZBcGHIsMAFEDReykVWgRtanYYCVp71ay95/v/f3EOMDRcAlVVgZEYLYPCWILA+ERUqgiTU9MpCDOzMVeDaiXqGSiUGvMLLC7F8gqgkjVb7c7q2voGiCp5EZvlre0URRW6vdjZTVBRhe5e7B8kqKiSF3F4dHySoqgkzdbpWf+83QFRuGhcXpFfx80AEG7v7h8e4ek5igzgpRevbwj99w+A7DO+vkGh9oOQ1X//QFXVf8KAFHYrlyAPAAAAAElFTkSuQmCC)](https://www.nextcapital.com)
 
-[![Node Version](https://img.shields.io/badge/node--lts-%3E%3D%2016.13.0-brightgreen)](https://nodejs.org/) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
+[![Node Version](https://img.shields.io/badge/node--lts-%3E%3D%2020.19.0-brightgreen)](https://nodejs.org/) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
 
 A series of ESLint configs to enforce Nextcapial's code standards.
+
+## Requirements
+
+- **Node.js** >= 20.19.0
+- **ESLint** >= 10
+- **eslint-plugin-import** >= 2.30.0
+
+> **Note:** `eslint-plugin-import`, `eslint-plugin-react`, and `eslint-plugin-jsx-a11y` do not yet officially declare ESLint 10 support in their peer dependencies. Consuming projects must add `overrides` in their `package.json` to resolve peer dependency conflicts. See [Peer Dependency Overrides](#peer-dependency-overrides) below.
 
 
 ## Current configs
@@ -61,6 +69,26 @@ export default [
 ## Contributing
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md)
+
+## Peer Dependency Overrides
+
+Some plugins (`eslint-plugin-import`, `eslint-plugin-react`, `eslint-plugin-jsx-a11y`) have not yet updated their peer dependencies to include ESLint 10. Add the following `overrides` to your project's `package.json`:
+
+```json
+{
+  "overrides": {
+    "eslint-plugin-import": {
+      "eslint": "$eslint"
+    },
+    "eslint-plugin-react": {
+      "eslint": "$eslint"
+    },
+    "eslint-plugin-jsx-a11y": {
+      "eslint": "$eslint"
+    }
+  }
+}
+```
 
 ### Maintainers
 

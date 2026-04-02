@@ -29,7 +29,7 @@ module.exports = [
   },
   {
     name: '@stylistic - Enable all style rules',
-    ...stylistic.configs['recommended-flat']
+    ...stylistic.configs.recommended
   },
   ...([
     './base/flat/best-practices',

@@ -32,7 +32,7 @@ module.exports = [
   },
   {
     name: '@stylistic - Enable recommended style rules',
-    ...stylistic.configs['recommended-flat']
+    ...stylistic.configs.recommended
   },
   ...([
     '@nextcapital/eslint-config/base/flat/best-practices',
