@@ -58,6 +58,10 @@ export default [
 ];
 ```
 
+## Deep-Dive Documentation
+
+Architecture documentation, implementation guides, and reference material for developers and AI agents are in [`.github/docs/`](.github/docs/README.md). Start there for understanding the codebase structure, adding rules, or creating new domain configs.
+
 ## Contributing
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md)
