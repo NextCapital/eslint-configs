@@ -40,7 +40,7 @@ cd typescript && npm run lint && cd ..
 
 ## How the Codebase is Organized
 
-Read the [architecture overview](../README.md) for the full picture, the [glossary](../reference/glossary.md) for term definitions, and the [config composition flow](../flows/config-composition.md) for how configs are assembled at runtime.
+Read the [architecture overview](../README.md) for the full picture.
 
 ## Common Tasks
 
@@ -67,14 +67,6 @@ See [Adding Rules](../guides/adding-rules.md) for the full rule-authoring conven
 
 - **Alphabetical rule ordering** — Enforced by `sort-keys` in `internal.js`
 - **Comment every rule** — See `javascript/base/best-practices.js` for examples
-- **[Semver-gated TODOs](../reference/glossary.md)** — Defer breaking rule changes with `// TODO: semver-major, enable`
+- **Semver-gated TODOs** — Defer breaking rule changes with `// TODO: semver-major, enable`
 - **No manual publishing** — Automated via GitHub Actions (see `CONTRIBUTING.md`)
 - **DCO sign-off required** — All commits need `Signed-off-by` (see `DCO.md`)
-
-## Evidence
-
-- `javascript/package.json` — `engines` field for Node/npm version requirements, `scripts` for available commands
-- `typescript/package.json` — Same structure, plus `@nextcapital/eslint-config` dependency
-- `.github/workflows/ci.yml` — CI validation steps
-- `.github/workflows/publish.yml` — Automated publish workflow
-- `CONTRIBUTING.md` — Full contribution guidelines including DCO

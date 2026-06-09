@@ -91,12 +91,4 @@ All plugin dependencies (`eslint-plugin-jest`, `eslint-plugin-jsdoc`, `eslint-pl
 - **File targeting** — Base config targets `**/*.{ts,tsx}`; domain configs extend with domain-appropriate patterns
 - **Duplicate rule management** — Core ESLint rules with TypeScript equivalents are explicitly disabled to prevent duplicate reporting
 - **Config naming** — All flat config objects use `name` fields prefixed with `@nextcapital/eslint-config-typescript/<domain>`
-- **[Linter safety defaults](../reference/glossary.md)** — Same enforcement as the JS package
-
-## Evidence
-
-- `typescript/index.js` — Entry point with full composition sequence
-- `typescript/base/style.js` — TS-specific style overrides demonstrating core-rule-off + TS-rule-on pattern
-- `typescript/jest/index.js` — Canonical example of minimal TS domain config layering
-- `typescript/react/index.js` — React 17+ jsx-runtime comment and TSX-specific composition
-- `typescript/package.json` — Dependency on `@nextcapital/eslint-config`, subpath exports, engines
+- **Linter safety defaults** — Same enforcement as the JS package

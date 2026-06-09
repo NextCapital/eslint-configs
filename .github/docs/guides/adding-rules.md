@@ -50,7 +50,7 @@ Each has a corresponding flat adapter in `flat/`.
 
 ## Adding a TypeScript-Specific Rule Override
 
-When TypeScript provides a rule that replaces a core ESLint rule — the [core-rule-off / TS-rule-on](../reference/glossary.md) pattern (e.g., `@typescript-eslint/no-unused-vars` replaces `no-unused-vars`):
+When TypeScript provides a rule that replaces a core ESLint rule — the **core-rule-off / TS-rule-on** pattern (e.g., `@typescript-eslint/no-unused-vars` replaces `no-unused-vars`):
 
 **Steps:**
 
@@ -84,10 +84,3 @@ The `internal.js` files in both packages configure linting for this repo's own s
 - [ ] `npm run lint` passes in the relevant package directory
 - [ ] If semver-major, marked with `// TODO: semver-major, enable` if deferred, or classified as major in PR
 - [ ] If TypeScript-specific, core duplicate rule disabled and TS replacement added
-
-## Evidence
-
-- `javascript/base/best-practices.js` — Canonical example of rule with comment and sort-keys ordering
-- `javascript/internal.js` — `sort-keys: 'error'` enforcement on rule files — `files` array lists governed files
-- `typescript/index.js` — Duplicate rule disable block — `'no-unused-vars': 'off'`
-- `typescript/base/style.js` — TS-specific rule overrides with core-rule-off pattern

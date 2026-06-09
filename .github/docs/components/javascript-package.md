@@ -24,7 +24,7 @@
 
 ## Internal Structure
 
-The package uses a [legacy/flat adapter pattern](../reference/glossary.md): legacy rule files define policy with rationale comments, and thin [flat config adapters](../reference/glossary.md) expose them to ESLint v9+.
+The package uses a **legacy/flat adapter pattern**: legacy rule files define policy with rationale comments, and thin flat config adapters expose them to ESLint v9+.
 
 **Entry points:**
 
@@ -72,7 +72,7 @@ Each domain directory contains:
 
 React additionally has `jsx-a11y.js` and `flat/jsx-a11y.js` for accessibility rules.
 
-Domain `index.js` files follow the same composition pattern (see [Config Composition Flow](../flows/config-composition.md) for the full sequence).
+Domain `index.js` files follow the same composition pattern.
 
 ## Interfaces
 
@@ -107,7 +107,7 @@ Consumers import via package subpath exports defined in `package.json`:
 
 ## Cross-Cutting Concerns
 
-- **[Linter safety defaults](../reference/glossary.md)** — All domain index files enforce unused disable directive and inline config reporting as errors
+- **Linter safety defaults** — All domain index files enforce unused disable directive and inline config reporting as errors
 - **File targeting** — Base config targets `**/*.{js,mjs,cjs,jsx}`; Jest configs target `**/*.{spec,test}.{js,mjs,cjs,jsx}`
 - **Global ignores** — Consistently applied: `.git/`, `**/node_modules/`, `**/build/`, `**/dist/`, `**/ts-output/`
 - **Config naming** — Every flat config object has a `name` field prefixed with `@nextcapital/eslint-config/<domain>` for traceability
@@ -115,12 +115,3 @@ Consumers import via package subpath exports defined in `package.json`:
 ## Extension Patterns
 
 See [Adding Rules](../guides/adding-rules.md) for adding rules to existing categories and [Adding a Domain Config](../guides/adding-a-domain-config.md) for creating a new domain config.
-
-## Evidence
-
-- `javascript/index.js` — Entry point flat config composition
-- `javascript/internal.js` — Self-linting config with sort-keys enforcement
-- `javascript/base/best-practices.js` — Canonical example of legacy rule file with rationale comments
-- `javascript/base/flat/best-practices.js` — Canonical example of flat config adapter
-- `javascript/jest/index.js` — Canonical example of domain config entry point
-- `javascript/package.json` — Subpath exports, engines, scripts, and dependency declarations

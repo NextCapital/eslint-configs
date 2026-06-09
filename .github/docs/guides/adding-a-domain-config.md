@@ -102,7 +102,7 @@ module.exports = [
 ```
 
 **Key conventions to follow:**
-- Include `linterOptions` with [linter safety defaults](../reference/glossary.md)
+- Include `linterOptions` with linter safety defaults (`reportUnusedDisableDirectives` and `reportUnusedInlineConfigs` set to `'error'`)
 - Use the standard ignores list
 - Place plugin recommended preset before NextCapital overrides
 - Use the naming prefix `@nextcapital/eslint-config/<domain>`
@@ -184,12 +184,3 @@ Add `eslint-plugin-example` to `dependencies` in `typescript/package.json` and e
 - [ ] `typescript/package.json` updated with subpath exports and dependency
 - [ ] `npm run lint` passes in both `javascript/` and `typescript/`
 - [ ] Both package READMEs updated with usage examples for the new domain config
-
-## Evidence
-
-- `javascript/jest/` — Canonical example of a simple domain config (setup + plugin preset + rules)
-- `javascript/react/` — Canonical example of a complex domain config (multiple plugins, accessibility, test overrides)
-- `typescript/jest/index.js` — Canonical example of minimal TS domain config
-- `typescript/react/index.js` — Canonical example of recomposed TS domain config
-- `javascript/package.json` — Subpath export patterns — `exports` field
-- `typescript/package.json` — Subpath export patterns — `exports` field
